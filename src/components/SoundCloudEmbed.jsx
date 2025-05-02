@@ -31,12 +31,12 @@ function SoundCloudEmbed({ embedUrl, description }) {
         overflow: 'hidden',
         bgcolor: 'white',
         '@media (prefers-color-scheme: dark)': {
-          bgcolor: 'grey.800',
-          color: 'grey.200',
+          bgcolor: 'grey.200',
+          color: 'grey.300',
         },
-        padding: { xs: 2, sm: 4 },
+        padding: { xs: 0, sm: 0 },
         position: 'relative',
-        minHeight: 180,
+        minHeight: 160,
       }}
     >
       {/* Placeholder Skeleton */}
@@ -44,7 +44,7 @@ function SoundCloudEmbed({ embedUrl, description }) {
         <Skeleton
           variant="rectangular"
           width="100%"
-          height={166}
+          height={160}
           animation="wave"
           sx={{ borderRadius: 1 }}
         />
@@ -66,7 +66,7 @@ function SoundCloudEmbed({ embedUrl, description }) {
             allow="autoplay"
             src={embedUrl}
             onLoad={() => setIframeLoaded(true)}
-            style={{ borderRadius: '4px' }}
+            style={{ borderRadius: '4px', marginBottom:"-7px" }}
           ></iframe>
         </Box>
       )}
