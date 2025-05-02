@@ -13,11 +13,7 @@
 			if (typeof CMS !== "undefined") {
 				CMS.init({ config: "/admin/config.yml" });
 			} else {
-				if (typeof CMS !== "undefined") {
-					CMS.init({ config: "/config.yml" });
-				} else {
-					console.error("Decap CMS failed to load.");
-				}
+				console.error("Decap CMS failed to load.");
 			}
 		</script>
 	</body>
