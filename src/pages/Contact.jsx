@@ -47,7 +47,7 @@ function Contact() {
   };
 
   return (
-    <Container maxWidth="md" sx={{ py: 6 }}>
+    <Container maxWidth="md" sx={{ py: 6, px:0 }}>
       <Paper elevation={3} sx={{ p: 4, bgcolor: "background.paper" }}>
         <Typography variant="h4" gutterBottom>
           Contact Kris Janowski

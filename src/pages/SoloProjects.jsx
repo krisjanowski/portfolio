@@ -143,13 +143,22 @@ function SoloProjects() {
 			sx={(theme) => ({
 				bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.50",
 				color: theme.palette.text.primary,
-				px: { xs: 1, md: 6 },
+				px: { xs: 0, md: 6 },
 				py: { xs: 4, md: 8 },
 			})}
 		>
-			<Typography variant="h4" component="h1" sx={{ mb: 3, fontWeight: "bold" }}>
-				Solo Projects
-			</Typography>
+              <Typography
+                variant="h4"
+                component="h1"
+                sx={{
+                  mb: { xs: 2, sm: 3 },
+                  fontWeight: "bold",
+                  fontSize: { xs: "1.75rem", sm: "2.25rem", md: "2.5rem" },
+                  lineHeight: 1.2,
+                }}
+              >
+                Solo Projects
+              </Typography>
 
 			<Typography sx={{ mb: 6, maxWidth: 720 }}>
 				My solo work reflects my personal vision — blending electronic soundscapes, intricate rhythms, and emotive melodic structures. Each
@@ -170,7 +179,7 @@ function SoloProjects() {
 						>
 							<CardHeader
 								titleTypographyProps={{ variant: "h6", fontWeight: "bold" }}
-								title={title.length > 30 ? `${title.slice(0, 35)}...` : title}
+								title={title.length > 30 ? `${title.slice(0, 30)}...` : title}
 								sx={{ pb: 0 }}
 							/>
 							<CardContent sx={{ flexGrow: 1 }}>

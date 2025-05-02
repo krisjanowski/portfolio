@@ -47,9 +47,10 @@ function Home() {
 						fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
 						mb: 2,
 						lineHeight: 1.2,
+                        whiteSpace: "normal",
 					}}
 				>
-					Welcome to Kris Janowski’s Portfolio
+					Welcome to Kris Janowski’s Portfolio
 				</Typography>
 
 				<Typography

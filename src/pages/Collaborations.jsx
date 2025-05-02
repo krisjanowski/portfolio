@@ -33,7 +33,7 @@ function Collaborations() {
       sx={(theme) => ({
         bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.100",
         color: theme.palette.text.primary,
-        px: { xs: 1, sm: 3, md: 6 },
+        px: { xs: 0, sm: 3, md: 6 },
         py: { xs: 4, sm: 6, md: 8 },
       })}
     >
@@ -91,7 +91,7 @@ function Collaborations() {
                     lineHeight: 1.3,
                   },
                 }}
-                title={title}
+                title={title.length > 30 ? `${title.slice(0, 30)}...` : title}
                 sx={{ pb: 0 }}
               />
               <CardContent sx={{ flexGrow: 1 }}>

@@ -45,7 +45,7 @@ function Studies() {
       sx={(theme) => ({
         bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.100",
         color: theme.palette.text.primary,
-        px: { xs: 1, sm: 3, md: 6 },
+        px: { xs: 0, sm: 3, md: 6 },
         py: { xs: 4, sm: 6, md: 8 },
       })}
     >
@@ -78,7 +78,7 @@ function Studies() {
       <Grid container spacing={4}>
         {studies.map(
           (
-            { title, description, problem, beforeUrl, afterUrl, conclusion },
+            { title = title.length > 30 ? `${title.slice(0, 30)}...` : title, description, problem, beforeUrl, afterUrl, conclusion },
             idx
           ) => (
             <Grid item xs={12} key={idx}>
