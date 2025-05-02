@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bar {
+	width: 4px;
+	height: 16px;
+	background-color: #4caf50; /* or match your theme */
+	animation: equalize 1s infinite ease-in-out;
+}
+
+.bar:nth-child(1) {
+	animation-delay: 0s;
+}
+.bar:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.bar:nth-child(3) {
+	animation-delay: 0.2s;
+}
+.bar:nth-child(4) {
+	animation-delay: 0.3s;
+}
+.bar:nth-child(5) {
+	animation-delay: 0.4s;
+}
+
+@keyframes equalize {
+	0% {
+		transform: scaleY(1);
+	}
+	25% {
+		transform: scaleY(1.5);
+	}
+	50% {
+		transform: scaleY(1);
+	}
+	75% {
+		transform: scaleY(2);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes wave {
+	0% {
+		transform: scaleY(1);
+	}
+	25% {
+		transform: scaleY(1.5);
+	}
+	50% {
+		transform: scaleY(1);
+	}
+	75% {
+		transform: scaleY(2);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}

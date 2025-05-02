@@ -20,6 +20,7 @@ const navLinks = [
   { title: "Solo Projects", path: "/solo-projects" },
   { title: "Collaborations", path: "/collaborations" },
   { title: "Studies", path: "/studies" },
+  { title: "Contact", path: "/contact" },
 ];
 
 function Navbar() {
