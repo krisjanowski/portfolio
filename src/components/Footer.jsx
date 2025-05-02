@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Link, Typography } from '@mui/material';
+import { Box, Link, Typography, Stack } from '@mui/material';
 
 function Footer() {
   return (
@@ -7,24 +7,50 @@ function Footer() {
       as="footer"
       sx={{
         bgcolor: 'white',
-        color: 'gray.800',
-        shadow: '0px 0px 4px rgba(0, 0, 0, 0.2)',
-        p: 4,
+        color: 'grey.800',
+        boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.2)',
+        px: { xs: 2, sm: 3, md: 4 },
+        py: { xs: 3, sm: 4 },
         textAlign: 'center',
         '@media (prefers-color-scheme: dark)': {
-          bgcolor: 'gray.800',
-          color: 'white',
+          bgcolor: 'grey.800',
+          color: 'grey.100',
         },
       }}
     >
-      <Typography>
-        Contact: <Link href="mailto:kris.janowski@example.com" underline="hover">kris.janowski@example.com</Link>
-      </Typography>
-      <Typography>
-        <Link href="https://soundcloud.com/krisjanowski" underline="hover" target="_blank" rel="noopener noreferrer">
-          SoundCloud
-        </Link>
-      </Typography>
+      <Stack
+        spacing={1.5}
+        sx={{
+          alignItems: 'center',
+          fontSize: { xs: '0.95rem', sm: '1rem' },
+        }}
+      >
+        <Typography>
+          Contact: <Link href="mailto:kris.janowski@example.com" underline="hover">
+            kris.janowski@example.com
+          </Link>
+        </Typography>
+
+        <Typography>
+          <Link
+            href="https://soundcloud.com/krisjanowski"
+            underline="hover"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SoundCloud
+          </Link>
+        </Typography>
+
+        <Typography>
+          <Link
+            href="/contact"
+            underline="hover"
+          >
+            Contact Page
+          </Link>
+        </Typography>
+      </Stack>
     </Box>
   );
 }

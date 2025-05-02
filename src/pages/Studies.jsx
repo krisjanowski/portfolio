@@ -38,7 +38,6 @@ function Studies() {
       conclusion:
         "Dynamic EQ side‑chaining restored vocal intelligibility, improving PESQ objective quality by 0.42.",
     },
-    // add more study objects here
   ];
 
   return (
@@ -46,15 +45,31 @@ function Studies() {
       sx={(theme) => ({
         bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.100",
         color: theme.palette.text.primary,
-        px: { xs: 3, md: 6 },
-        py: { xs: 4, md: 8 },
+        px: { xs: 1, sm: 3, md: 6 },
+        py: { xs: 4, sm: 6, md: 8 },
       })}
     >
-      <Typography variant="h4" component="h1" sx={{ mb: 3, fontWeight: "bold" }}>
+      <Typography
+        variant="h4"
+        component="h1"
+        sx={{
+          mb: { xs: 2, sm: 3 },
+          fontWeight: "bold",
+          fontSize: { xs: "1.75rem", sm: "2.25rem", md: "2.5rem" },
+          lineHeight: 1.2,
+        }}
+      >
         Studies
       </Typography>
 
-      <Typography sx={{ mb: 6, maxWidth: 720 }}>
+      <Typography
+        sx={{
+          mb: { xs: 4, sm: 5, md: 6 },
+          maxWidth: 720,
+          fontSize: { xs: "1rem", sm: "1.125rem", md: "1.25rem" },
+          lineHeight: 1.6,
+        }}
+      >
         My academic work blends scientific research with creative audio
         exploration — from psychoacoustics to spatial perception. Each study
         below shows the “before” problem mix and the “after” solution.
@@ -74,24 +89,53 @@ function Studies() {
                 }}
               >
                 <CardHeader
-                  titleTypographyProps={{ variant: "h6", fontWeight: "bold" }}
+                  titleTypographyProps={{
+                    variant: "h6",
+                    sx: {
+                      fontWeight: "bold",
+                      fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.75rem" },
+                    },
+                  }}
+                  subheaderTypographyProps={{
+                    variant: "subtitle1",
+                    sx: {
+                      fontSize: { xs: "1rem", sm: "1.125rem", md: "1.25rem" },
+                      color: "text.secondary",
+                    },
+                  }}
                   title={title}
                   subheader={description}
                 />
                 <CardContent>
                   <Typography
                     variant="subtitle2"
-                    sx={{ mb: 1, color: "text.secondary" }}
+                    sx={{
+                      mb: 1,
+                      color: "text.secondary",
+                      fontSize: { xs: "0.95rem", sm: "1rem" },
+                    }}
                   >
                     Problem
                   </Typography>
-                  <Typography sx={{ mb: 2 }}>{problem}</Typography>
+                  <Typography
+                    sx={{
+                      mb: 2,
+                      fontSize: { xs: "1rem", sm: "1.125rem" },
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    {problem}
+                  </Typography>
 
-                  <Grid container spacing={2}>
+                  <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
                       <Typography
                         variant="subtitle2"
-                        sx={{ mb: 1, color: "text.secondary" }}
+                        sx={{
+                          mb: 1,
+                          color: "text.secondary",
+                          fontSize: { xs: "0.95rem", sm: "1rem" },
+                        }}
                       >
                         Before
                       </Typography>
@@ -101,7 +145,11 @@ function Studies() {
                     <Grid item xs={12} md={6}>
                       <Typography
                         variant="subtitle2"
-                        sx={{ mb: 1, color: "text.secondary" }}
+                        sx={{
+                          mb: 1,
+                          color: "text.secondary",
+                          fontSize: { xs: "0.95rem", sm: "1rem" },
+                        }}
                       >
                         After
                       </Typography>
@@ -109,15 +157,30 @@ function Studies() {
                     </Grid>
                   </Grid>
 
-                  <Divider sx={{ my: 2 }} />
+                  <Divider
+                    sx={{
+                      my: { xs: 2, sm: 3 },
+                    }}
+                  />
 
                   <Typography
                     variant="subtitle2"
-                    sx={{ mb: 1, color: "text.secondary" }}
+                    sx={{
+                      mb: 1,
+                      color: "text.secondary",
+                      fontSize: { xs: "0.95rem", sm: "1rem" },
+                    }}
                   >
                     Conclusion
                   </Typography>
-                  <Typography>{conclusion}</Typography>
+                  <Typography
+                    sx={{
+                      fontSize: { xs: "1rem", sm: "1.125rem" },
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    {conclusion}
+                  </Typography>
                 </CardContent>
               </Card>
             </Grid>

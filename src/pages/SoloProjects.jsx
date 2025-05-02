@@ -143,7 +143,7 @@ function SoloProjects() {
 			sx={(theme) => ({
 				bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.50",
 				color: theme.palette.text.primary,
-				px: { xs: 3, md: 6 },
+				px: { xs: 1, md: 6 },
 				py: { xs: 4, md: 8 },
 			})}
 		>
