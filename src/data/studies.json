@@ -1,28 +1,19 @@
 [
     {
       "title": "Immersive Binaural Mix Study",
-      "description":
-        "Evaluating spatial positioning techniques for headphone-focused releases.",
-      "problem":
-        "Stereo mixes often lack realistic front-back depth, leading to listener fatigue.",
-      "beforeUrl":
-        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/456789012",
-      "afterUrl":
-        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/456789013",
-      "conclusion":
-        "Head-related-transfer-function (HRTF) convolution increased front-back localization scores by 38% in blind tests."
+      "description": "Evaluating spatial positioning techniques for headphone-focused releases.",
+      "problem": "Stereo mixes often lack realistic front-back depth, leading to listener fatigue.",
+      "beforeUrl": "/audio/binaural_before.wav",
+      "afterUrl": "/audio/binaural_before.wav",
+      "conclusion": "Head-related-transfer-function (HRTF) convolution increased front-back localization scores by 38% in blind tests."
     },
     {
       "title": "Psychoacoustic Masking Control",
-      "description":
-        "Reducing frequency masking in dense electronic arrangements.",
-      "problem":
-        "Competing mid-range elements masked the vocal formants, reducing clarity by >4 dB.",
-      "beforeUrl":
-        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/567890123",
-      "afterUrl":
-        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/567890124",
-      "conclusion":
-        "Dynamic EQ side-chaining restored vocal intelligibility, improving PESQ objective quality by 0.42."
+      "description": "Reducing frequency masking in dense electronic arrangements.",
+      "problem": "Competing mid-range elements masked the vocal formants, reducing clarity by >4 dB.",
+      "beforeUrl": "/audio/binaural_before.wav",
+      "afterUrl": "/audio/binaural_before.wav",
+      "conclusion": "Dynamic EQ side-chaining restored vocal intelligibility, improving PESQ objective quality by 0.42."
     }
   ]
+  

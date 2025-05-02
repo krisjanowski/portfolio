@@ -8,11 +8,9 @@ import {
   Grid,
   Divider,
 } from "@mui/material";
-import SoundCloudEmbed from "../components/SoundCloudEmbed.jsx";
 import studies from "../data/studies.json";
 
 function Studies() {
-
   return (
     <Box
       sx={(theme) => ({
@@ -51,16 +49,18 @@ function Studies() {
       <Grid container spacing={4}>
         {studies.map(
           (
-            { title = title.length > 30 ? `${title.slice(0, 30)}...` : title, description, problem, beforeUrl, afterUrl, conclusion },
+            {
+              title = title.length > 30 ? `${title.slice(0, 30)}...` : title,
+              description,
+              problem,
+              beforeUrl,
+              afterUrl,
+              conclusion,
+            },
             idx
           ) => (
             <Grid item xs={12} key={idx}>
-              <Card
-                variant="outlined"
-                sx={{
-                  bgcolor: "background.paper",
-                }}
-              >
+              <Card variant="outlined" sx={{ bgcolor: "background.paper" }}>
                 <CardHeader
                   titleTypographyProps={{
                     variant: "h6",
@@ -112,7 +112,13 @@ function Studies() {
                       >
                         Before
                       </Typography>
-                      <SoundCloudEmbed embedUrl={beforeUrl} />
+                      <audio
+                        controls
+                        style={{ width: "100%" }}
+                        src={beforeUrl}
+                      >
+                        Your browser does not support the audio element.
+                      </audio>
                     </Grid>
 
                     <Grid item xs={12} md={6}>
@@ -126,15 +132,17 @@ function Studies() {
                       >
                         After
                       </Typography>
-                      <SoundCloudEmbed embedUrl={afterUrl} />
+                      <audio
+                        controls
+                        style={{ width: "100%" }}
+                        src={afterUrl}
+                      >
+                        Your browser does not support the audio element.
+                      </audio>
                     </Grid>
                   </Grid>
 
-                  <Divider
-                    sx={{
-                      my: { xs: 2, sm: 3 },
-                    }}
-                  />
+                  <Divider sx={{ my: { xs: 2, sm: 3 } }} />
 
                   <Typography
                     variant="subtitle2"
