@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: krisjanowski/portfolio
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "soloProjects"
+    label: "Solo Projects"
+    label_singular: "Solo Project"
+    files:
+      - file: "src/data/soloProjects.json"
+        label: "Solo Projects List"
+        name: "solo_projects"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Embed URL", name: "embedUrl", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "collaborations"
+    label: "Collaborations"
+    label_singular: "Collaboration"
+    files:
+      - file: "src/data/collaborations.json"
+        label: "Collaborations List"
+        name: "collaborations"
+        fields:
+          - label: "Collaborations"
+            name: "collaborations"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Embed URL", name: "embedUrl", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "studies"
+    label: "Studies"
+    label_singular: "Study"
+    files:
+      - file: "src/data/studies.json"
+        label: "Studies List"
+        name: "studies"
+        fields:
+          - label: "Studies"
+            name: "studies"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Problem", name: "problem", widget: "text" }
+              - { label: "Before Embed URL", name: "beforeUrl", widget: "string" }
+              - { label: "After Embed URL", name: "afterUrl", widget: "string" }
+              - { label: "Conclusion", name: "conclusion", widget: "text" }

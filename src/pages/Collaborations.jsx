@@ -8,25 +8,9 @@ import {
   CardContent,
 } from "@mui/material";
 import SoundCloudEmbed from "../components/SoundCloudEmbed.jsx";
+import collabs from "../data/collaborations.json";
 
 function Collaborations() {
-  const collabs = [
-    {
-      title: "Echo & Embers (feat. Ella Rivers)",
-      embedUrl:
-        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/234567890",
-      description:
-        "A delicate blend of Ella Rivers’ acoustic guitar and vocals layered with airy synth pads.",
-    },
-    {
-      title: "Pulse Shift (prod. with Lumen)",
-      embedUrl:
-        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/345678901",
-      description:
-        "Exploring experimental drum design and lush harmonic layering with producer Lumen.",
-    },
-    // add more collaboration objects whenever you have new releases
-  ];
 
   return (
     <Box
