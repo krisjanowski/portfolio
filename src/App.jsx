@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import SoloProjects from "./pages/SoloProjects";
 import Collaborations from "./pages/Collaborations";
 import Studies from "./pages/Studies";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/solo-projects" element={<SoloProjects />} />
             <Route path="/collaborations" element={<Collaborations />} />
             <Route path="/studies" element={<Studies />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Container>
         <Footer />

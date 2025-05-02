@@ -27,13 +27,13 @@ function Footer() {
       >
         <Typography>
           Contact: <Link href="mailto:kris.janowski@example.com" underline="hover">
-            kris.janowski@example.com
+            krisjanowski93@gmail.com
           </Link>
         </Typography>
 
         <Typography>
           <Link
-            href="https://soundcloud.com/krisjanowski"
+            href="https://soundcloud.com/kris-janowski"
             underline="hover"
             target="_blank"
             rel="noopener noreferrer"

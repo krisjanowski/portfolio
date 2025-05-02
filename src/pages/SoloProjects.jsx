@@ -168,7 +168,11 @@ function SoloProjects() {
 								bgcolor: "background.paper",
 							}}
 						>
-							<CardHeader titleTypographyProps={{ variant: "h6", fontWeight: "bold" }} title={title} sx={{ pb: 0 }} />
+							<CardHeader
+								titleTypographyProps={{ variant: "h6", fontWeight: "bold" }}
+								title={title.length > 30 ? `${title.slice(0, 35)}...` : title}
+								sx={{ pb: 0 }}
+							/>
 							<CardContent sx={{ flexGrow: 1 }}>
 								<SoundCloudEmbed embedUrl={embedUrl} />
 								<Typography variant="body2" sx={{ mt: 2 }}>
