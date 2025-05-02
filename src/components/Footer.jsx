@@ -1,15 +1,32 @@
+import React from "react";
+import { Box, Link, Typography } from '@mui/material';
 
 function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-800 shadow-inner p-4 text-center">
-      <p>Contact: <a href="mailto:kris.janowski@example.com" className="underline">kris.janowski@example.com</a></p>
-      <p>
-        <a href="https://soundcloud.com/krisjanowski" target="_blank" rel="noreferrer" className="underline">
+    <Box
+      as="footer"
+      sx={{
+        bgcolor: 'white',
+        color: 'gray.800',
+        shadow: '0px 0px 4px rgba(0, 0, 0, 0.2)',
+        p: 4,
+        textAlign: 'center',
+        '@media (prefers-color-scheme: dark)': {
+          bgcolor: 'gray.800',
+          color: 'white',
+        },
+      }}
+    >
+      <Typography>
+        Contact: <Link href="mailto:kris.janowski@example.com" underline="hover">kris.janowski@example.com</Link>
+      </Typography>
+      <Typography>
+        <Link href="https://soundcloud.com/krisjanowski" underline="hover" target="_blank" rel="noopener noreferrer">
           SoundCloud
-        </a>
-      </p>
-    </footer>
-  )
+        </Link>
+      </Typography>
+    </Box>
+  );
 }
 
-export default Footer
+export default Footer;

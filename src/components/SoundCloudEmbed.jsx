@@ -1,7 +1,21 @@
+import React from "react";
+import { Box, Typography } from '@mui/material';
 
 function SoundCloudEmbed({ embedUrl, description }) {
   return (
-    <div className="shadow-lg rounded-lg overflow-hidden bg-white dark:bg-gray-700 p-2">
+    <Box
+      sx={{
+        boxShadow: 8,
+        borderRadius: 8,
+        overflow: 'hidden',
+        bgcolor: 'white',
+        '@media (prefers-color-scheme: dark)': {
+          bgcolor: 'gray.700',
+          color: 'gray.200',
+        },
+        padding: 4,
+      }}
+    >
       <iframe
         width="100%"
         height="166"
@@ -10,9 +24,23 @@ function SoundCloudEmbed({ embedUrl, description }) {
         allow="autoplay"
         src={embedUrl}
       ></iframe>
-      {description && <p className="mt-2 text-sm italic">{description}</p>}
-    </div>
-  )
+      {description && (
+        <Typography
+          mt={2}
+          variant="body2"
+          fontStyle="italic"
+          color="gray.800"
+          sx={{
+            '@media (prefers-color-scheme: dark)': {
+              color: 'gray.200',
+            },
+          }}
+        >
+          {description}
+        </Typography>
+      )}
+    </Box>
+  );
 }
 
-export default SoundCloudEmbed
+export default SoundCloudEmbed;
