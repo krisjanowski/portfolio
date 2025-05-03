@@ -15,6 +15,7 @@ import { SoundCloudPlayerProvider } from "./contexts/SoundCloudPlayerContext";
 import { WavPlayerProvider } from "./contexts/WavPlayerContext";
 import WavNowPlayingBar from "./components/WavNowPlayingBar";
 import { GlobalAudioManagerProvider } from "./contexts/GlobalAudioManagerContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App({ toggleMode, mode }) {
 	const theme = useTheme();
@@ -24,6 +25,7 @@ function App({ toggleMode, mode }) {
 			<SoundCloudPlayerProvider>
 				<GlobalAudioManagerProvider>
 					<Router>
+						<ScrollToTop />
 						<CssBaseline />
 						<Box
 							sx={{
@@ -41,9 +43,9 @@ function App({ toggleMode, mode }) {
 							<Container
 								sx={{
 									flex: 1,
-									maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "1200px" },
+									maxWidth: { xs: "100%", sm: "100%", md: "85%", lg: "1200px" },
 									width: "100%",
-									py: { xs: 1, md: 8 },
+									py: { xs: 1, sm: 2, md: 8 },
 								}}
 							>
 								<Routes>

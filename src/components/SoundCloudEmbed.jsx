@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, ButtonBase, Typography, useTheme, CircularProgress } from "@mui/material";
 import { useGlobalAudioManager } from "../contexts/GlobalAudioManagerContext";
 import { useSoundCloudPlayer } from "../contexts/SoundCloudPlayerContext";
@@ -13,18 +13,37 @@ function SoundCloudEmbed({ embedUrl, description, title }) {
 
     const isPlaying = currentTrack?.embedUrl === embedUrl;
 
-    const [iframeLoaded, setIframeLoaded] = useState(false);
+    const [iframeKey, setIframeKey] = useState(0);
+    const [loading, setLoading] = useState(false);
 
     const handlePlay = () => {
         playSoundCloudTrack({
             title: title || `Track ${trackId}`,
             embedUrl,
         });
+
+        setLoading(true); // Spinner immediately
+
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000); // 1s minimum spinner time
     };
 
-    // Reset loading state when a new track starts
+    // 🔥 Always reset loading & iframe when track changes
     useEffect(() => {
-        setIframeLoaded(false);
+        setIframeKey(prev => prev + 1);
+
+        if (isPlaying) {
+            setLoading(true);
+
+            const timeout = setTimeout(() => {
+                setLoading(false);
+            }, 1000); // Adjust for spinner duration
+
+            return () => clearTimeout(timeout);
+        } else {
+            setLoading(false);
+        }
     }, [embedUrl, isPlaying]);
 
     return (
@@ -36,13 +55,13 @@ function SoundCloudEmbed({ embedUrl, description, title }) {
                 bgcolor: theme.palette.background.paper,
                 color: theme.palette.text.primary,
                 position: "relative",
-                minHeight: 200,
                 transition: "background-color 0.3s, color 0.3s"
             }}
         >
             {!isPlaying ? (
                 <>
                     <iframe
+                        key={"preview-" + iframeKey}
                         width="100%"
                         height="166"
                         scrolling="no"
@@ -79,16 +98,25 @@ function SoundCloudEmbed({ embedUrl, description, title }) {
                         justifyContent: "center",
                         gap: 1,
                         height: "100%",
+                        position: "relative",
                     }}
                 >
-                    {!iframeLoaded && (
-                        <CircularProgress
-                            color="primary"
-                            size={48}
-                            sx={{ mb: 2 }}
-                        />
+                    {/* Spinner */}
+                    {loading && (
+                        <Box
+                            sx={{
+                                position: "absolute",
+                                top: "50%",
+                                left: "50%",
+                                transform: "translate(-50%, -50%)",
+                                zIndex: 10,
+                            }}
+                        >
+                            <CircularProgress color="primary" size={48} />
+                        </Box>
                     )}
 
+                    {/* Iframe */}
                     <Box
                         sx={{
                             position: "absolute",
@@ -96,12 +124,11 @@ function SoundCloudEmbed({ embedUrl, description, title }) {
                             left: 0,
                             width: "100%",
                             height: "166px",
-                            opacity: iframeLoaded ? 1 : 0,
-                            transition: "opacity 0.4s ease-in-out",
+                            opacity: 1,
                         }}
                     >
                         <iframe
-                            key={embedUrl}
+                            key={"playing-" + iframeKey}
                             width="100%"
                             height="166"
                             scrolling="no"
@@ -110,11 +137,11 @@ function SoundCloudEmbed({ embedUrl, description, title }) {
                             src={embedUrl}
                             style={{ borderRadius: "4px" }}
                             title={title || `Track ${trackId}`}
-                            onLoad={() => setIframeLoaded(true)}
                         ></iframe>
                     </Box>
 
-                    {iframeLoaded ? (
+                    {/* Animation Bars */}
+                    {!loading && (
                         <Box
                             sx={{
                                 display: "flex",
@@ -131,25 +158,12 @@ function SoundCloudEmbed({ embedUrl, description, title }) {
                             <Box sx={{ width: "4px", height: "65%", bgcolor: theme.palette.primary.main, animation: "wave 1s infinite ease-in-out 0.6s" }} />
                             <Box sx={{ width: "4px", height: "45%", bgcolor: theme.palette.primary.main, animation: "wave 1s infinite ease-in-out 0.8s" }} />
                         </Box>
-                    ) : null}
+                    )}
 
                     <Typography variant="subtitle1" fontWeight="bold" textAlign="center">
-                        {iframeLoaded ? "Now Playing" : "Loading..."}
+                        {loading ? "Loading..." : "Now Playing"}
                     </Typography>
                 </Box>
-            )}
-
-            {description && (
-                <Typography
-                    mt={2}
-                    variant="body2"
-                    fontStyle="italic"
-                    sx={{
-                        color: theme.palette.text.secondary
-                    }}
-                >
-                    {description}
-                </Typography>
             )}
         </Box>
     );

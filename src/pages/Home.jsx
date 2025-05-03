@@ -10,12 +10,12 @@ function Home() {
 			sx={(theme) => ({
 				bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.50",
 				color: theme.palette.text.primary,
-				px: { xs: 0, md: 6 },
+				px: { xs: 2, md: 6 },
 				py: { xs: 4, md: 8 },
 			})}
 		>
 			{/* HERO SECTION */}
-			<Box sx={{ textAlign: "center", mb: { xs: 5, md: 8 } }}>
+			<Box sx={{ textAlign: "center", mb: { xs: 5, md: 8 }, px: { xs: 2, sm: 3, md: 4 } }}>
 				<Box
 					sx={{
 						display: "flex",

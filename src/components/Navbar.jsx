@@ -13,7 +13,8 @@ import {
   useTheme,
   useMediaQuery,
   Tooltip,
-  Stack
+  Stack,
+  Divider
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -107,6 +108,7 @@ function Navbar({ toggleMode, mode }) {
                 component="a"
                 href="https://soundcloud.com/kris-janowski"
                 target="_blank"
+                title="SoundCloud"
                 rel="noopener"
                 color="inherit"
               >
@@ -116,8 +118,9 @@ function Navbar({ toggleMode, mode }) {
             <Tooltip title="Apple Music">
               <IconButton
                 component="a"
-                href="https://music.apple.com/your-apple-music"
+                href="https://music.apple.com/us/artist/kris-janowski/1628563447"
                 target="_blank"
+                title="Apple Music"
                 rel="noopener"
                 color="inherit"
               >
@@ -127,8 +130,9 @@ function Navbar({ toggleMode, mode }) {
             <Tooltip title="LinkedIn">
               <IconButton
                 component="a"
-                href="https://linkedin.com/in/your-linkedin"
+                href="https://www.linkedin.com/in/kris-janowski-4a4b80b1/"
                 target="_blank"
+                title="LinkedIn"s
                 rel="noopener"
                 color="inherit"
               >
