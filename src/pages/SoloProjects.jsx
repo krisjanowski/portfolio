@@ -50,6 +50,9 @@ function SoloProjects() {
 							/>
 							<CardContent sx={{ flexGrow: 1 }}>
 								<SoundCloudEmbed embedUrl={embedUrl} title={title} description={description} />
+								<Typography variant="body2" sx={{ mt: 2 }}>
+									{description}
+								</Typography>
 							</CardContent>
 						</Card>
 					</Grid>
