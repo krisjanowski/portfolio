@@ -1,9 +1,11 @@
 import React from "react";
 import { Box, ButtonBase, Typography } from "@mui/material";
+import { useGlobalAudioManager } from "../contexts/GlobalAudioManagerContext";
 import { useSoundCloudPlayer } from "../contexts/SoundCloudPlayerContext";
 
 function SoundCloudEmbed({ embedUrl, description, title }) {
-	const { playTrack, currentTrack } = useSoundCloudPlayer();
+    const { playSoundCloudTrack } = useGlobalAudioManager();
+    const { currentTrack } = useSoundCloudPlayer();
 
 	const titleMatch = embedUrl.match(/tracks%2F(\d+)/);
 	const trackId = titleMatch ? titleMatch[1] : "Unknown Track";
@@ -11,7 +13,7 @@ function SoundCloudEmbed({ embedUrl, description, title }) {
 	const isPlaying = currentTrack?.embedUrl === embedUrl;
 
 	const handlePlay = () => {
-		playTrack({
+		playSoundCloudTrack({
 			title: title || `Track ${trackId}`,
 			embedUrl,
 		});

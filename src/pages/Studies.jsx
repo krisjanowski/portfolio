@@ -9,6 +9,7 @@ import {
   Divider,
 } from "@mui/material";
 import studies from "../data/studies.json";
+import AudioPlayer from "../components/AudioPlayer";
 
 function Studies() {
   return (
@@ -102,43 +103,11 @@ function Studies() {
 
                   <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
-                      <Typography
-                        variant="subtitle2"
-                        sx={{
-                          mb: 1,
-                          color: "text.secondary",
-                          fontSize: { xs: "0.95rem", sm: "1rem" },
-                        }}
-                      >
-                        Before
-                      </Typography>
-                      <audio
-                        controls
-                        style={{ width: "100%" }}
-                        src={beforeUrl}
-                      >
-                        Your browser does not support the audio element.
-                      </audio>
+                        <AudioPlayer src={beforeUrl} label="Before" />
                     </Grid>
 
                     <Grid item xs={12} md={6}>
-                      <Typography
-                        variant="subtitle2"
-                        sx={{
-                          mb: 1,
-                          color: "text.secondary",
-                          fontSize: { xs: "0.95rem", sm: "1rem" },
-                        }}
-                      >
-                        After
-                      </Typography>
-                      <audio
-                        controls
-                        style={{ width: "100%" }}
-                        src={afterUrl}
-                      >
-                        Your browser does not support the audio element.
-                      </audio>
+                      <AudioPlayer src={afterUrl} label="After" />
                     </Grid>
                   </Grid>
 
