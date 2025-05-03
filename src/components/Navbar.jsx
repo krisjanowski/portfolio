@@ -11,30 +11,47 @@ import {
   ListItemButton,
   ListItemText,
   useTheme,
-  useMediaQuery
+  useMediaQuery,
+  Tooltip,
+  Stack
 } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import AppleIcon from "@mui/icons-material/Apple";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
-const navLinks = [
-  { title: "Home", path: "/" },
-  { title: "Solo Projects", path: "/solo-projects" },
-  { title: "Collaborations", path: "/collaborations" },
-  { title: "Studies", path: "/studies" },
-  { title: "Contact", path: "/contact" },
-];
-
-function Navbar() {
+// Update this when using toggleMode and mode props!
+function Navbar({ toggleMode, mode }) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+  const navLinks = [
+    { title: "Home", path: "/" },
+    { title: "Solo Projects", path: "/solo-projects" },
+    { title: "Collaborations", path: "/collaborations" },
+    { title: "Studies", path: "/studies" },
+    { title: "Contact", path: "/contact" },
+  ];
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
 
   return (
-    <Box sx={{ bgcolor: "common.white", boxShadow: 2 }}>
+    <Box
+      sx={{
+        bgcolor: "background.paper",
+        color: "text.primary",
+        boxShadow: 2,
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+      }}
+    >
       <Box
         sx={{
           maxWidth: (theme) => theme.breakpoints.values.lg,
@@ -46,33 +63,96 @@ function Navbar() {
           justifyContent: "space-between",
         }}
       >
-        <Typography variant="h6" fontWeight="bold" sx={{ fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
-          Kris Janowski
-        </Typography>
+        {/* Brand */}
+        <Box>
+          <Typography
+            variant="h6"
+            fontWeight="bold"
+            sx={{ fontSize: { xs: "1.1rem", sm: "1.25rem" } }}
+          >
+            Kris Janowski
+          </Typography>
+          <Typography
+            variant="caption"
+            sx={{ color: "text.secondary", fontSize: "0.8rem" }}
+          >
+            Mixing & Mastering Engineer
+          </Typography>
+        </Box>
 
-        {/* Desktop Links */}
+        {/* Desktop Links and Icons */}
         {!isMobile && (
-          <Box sx={{ display: "flex", gap: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
             {navLinks.map((link) => (
               <Button
                 key={link.title}
                 component={Link}
                 to={link.path}
                 variant="text"
+                color="inherit"
               >
                 {link.title}
               </Button>
             ))}
+
+            {/* Social Icons */}
+            <Tooltip title="SoundCloud">
+              <IconButton
+                component="a"
+                href="https://soundcloud.com/kris-janowski"
+                target="_blank"
+                rel="noopener"
+                color="inherit"
+              >
+                <MusicNoteIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Apple Music">
+              <IconButton
+                component="a"
+                href="https://music.apple.com/your-apple-music"
+                target="_blank"
+                rel="noopener"
+                color="inherit"
+              >
+                <AppleIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="LinkedIn">
+              <IconButton
+                component="a"
+                href="https://linkedin.com/in/your-linkedin"
+                target="_blank"
+                rel="noopener"
+                color="inherit"
+              >
+                <LinkedInIcon />
+              </IconButton>
+            </Tooltip>
+
+            {/* Dark Mode Toggle */}
+            <Tooltip title="Toggle light/dark mode">
+              <IconButton onClick={toggleMode} color="inherit">
+                {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+              </IconButton>
+            </Tooltip>
           </Box>
         )}
 
-        {/* Mobile Hamburger Menu */}
+        {/* Mobile Hamburger */}
         {isMobile && (
           <>
             <IconButton
               onClick={toggleDrawer(true)}
               edge="end"
               aria-label="menu"
+              color="inherit"
             >
               <MenuIcon />
             </IconButton>
@@ -82,7 +162,7 @@ function Navbar() {
               onClose={toggleDrawer(false)}
             >
               <Box
-                sx={{ width: 250 }}
+                sx={{ width: 260, py: 2 }}
                 role="presentation"
                 onClick={toggleDrawer(false)}
                 onKeyDown={toggleDrawer(false)}
@@ -96,6 +176,46 @@ function Navbar() {
                     </ListItem>
                   ))}
                 </List>
+
+                <Divider sx={{ my: 2 }} />
+
+                <Stack direction="row" spacing={1} justifyContent="center">
+                  <IconButton
+                    component="a"
+                    href="https://soundcloud.com/kris-janowski"
+                    target="_blank"
+                    rel="noopener"
+                    color="inherit"
+                  >
+                    <MusicNoteIcon />
+                  </IconButton>
+                  <IconButton
+                    component="a"
+                    href="https://music.apple.com/your-apple-music"
+                    target="_blank"
+                    rel="noopener"
+                    color="inherit"
+                  >
+                    <AppleIcon />
+                  </IconButton>
+                  <IconButton
+                    component="a"
+                    href="https://linkedin.com/in/your-linkedin"
+                    target="_blank"
+                    rel="noopener"
+                    color="inherit"
+                  >
+                    <LinkedInIcon />
+                  </IconButton>
+                </Stack>
+
+                <Stack direction="row" justifyContent="center" sx={{ mt: 2 }}>
+                  <Tooltip title="Toggle light/dark mode">
+                    <IconButton onClick={toggleMode} color="inherit">
+                      {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+                    </IconButton>
+                  </Tooltip>
+                </Stack>
               </Box>
             </Drawer>
           </>

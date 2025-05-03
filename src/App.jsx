@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Box, Container, CssBaseline } from "@mui/material";
+import { Box, Container, CssBaseline, useTheme } from "@mui/material";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
@@ -16,7 +16,9 @@ import { WavPlayerProvider } from "./contexts/WavPlayerContext";
 import WavNowPlayingBar from "./components/WavNowPlayingBar";
 import { GlobalAudioManagerProvider } from "./contexts/GlobalAudioManagerContext";
 
-function App() {
+function App({ toggleMode, mode }) {
+	const theme = useTheme();
+
 	return (
 		<WavPlayerProvider>
 			<SoundCloudPlayerProvider>
@@ -28,12 +30,12 @@ function App() {
 								minHeight: "100vh",
 								display: "flex",
 								flexDirection: "column",
-								bgcolor: { xs: "grey.100", dark: "grey.800" },
-								color: "grey.900",
-								transition: "background-color 0.2s",
+								bgcolor: theme.palette.background.default,
+								color: theme.palette.text.primary,
+								transition: "background-color 0.2s, color 0.2s",
 							}}
 						>
-							<Navbar />
+							<Navbar toggleMode={toggleMode} mode={mode} />
 							<SoundCloudNowPlayingBar />
 							<WavNowPlayingBar />
 							<Container

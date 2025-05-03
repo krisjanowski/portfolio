@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, Typography, IconButton, useTheme } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { useSoundCloudPlayer } from "../contexts/SoundCloudPlayerContext";
 
 function SoundCloudNowPlayingBar() {
   const { currentTrack, stopTrack } = useSoundCloudPlayer();
   const iframeRef = useRef(null);
+  const theme = useTheme();
 
   // To store widget instance so we don't keep rebinding
   const widgetRef = useRef(null);
@@ -44,10 +45,10 @@ function SoundCloudNowPlayingBar() {
         bottom: 0,
         left: 0,
         width: '100%',
-        bgcolor: 'white',
-        color: 'black',
+        bgcolor: theme.palette.background.paper,
+        color: theme.palette.text.primary,
         borderTop: 1,
-        borderColor: 'grey.300',
+        borderColor: theme.palette.divider,
         px: 2,
         py: 1,
         display: 'flex',
@@ -56,6 +57,7 @@ function SoundCloudNowPlayingBar() {
         flexWrap: 'wrap',
         boxShadow: 5,
         zIndex: 1500,
+        transition: "background-color 0.3s, color 0.3s"
       }}
     >
       <Box sx={{ flexGrow: 1, minWidth: 300 }}>
@@ -73,11 +75,24 @@ function SoundCloudNowPlayingBar() {
             allow="autoplay"
             src={currentTrack.embedUrl}
             title={currentTrack.title}
-            style={{ borderRadius: '4px' }}
+            style={{
+              borderRadius: '4px',
+              width: "100%",
+              backgroundColor: theme.palette.background.paper,
+            }}
           ></iframe>
         </Box>
       </Box>
-      <IconButton onClick={stopTrack} sx={{ ml: 2 }}>
+      <IconButton
+        onClick={stopTrack}
+        sx={{
+          ml: 2,
+          color: theme.palette.text.primary,
+          '&:hover': {
+            color: theme.palette.primary.main,
+          }
+        }}
+      >
         <CloseIcon />
       </IconButton>
     </Box>

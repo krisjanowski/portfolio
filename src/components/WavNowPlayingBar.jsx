@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, Typography, IconButton, useTheme } from "@mui/material";
 import PauseIcon from "@mui/icons-material/Pause";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import CloseIcon from "@mui/icons-material/Close";
@@ -12,6 +12,7 @@ function WavNowPlayingBar() {
 
 	const waveformRef = useRef(null);
 	const wavesurferRef = useRef(null);
+	const theme = useTheme();
 
 	useEffect(() => {
 		const audio = audioRef.current;
@@ -42,14 +43,14 @@ function WavNowPlayingBar() {
 
 		wavesurferRef.current = WaveSurfer.create({
 			container: waveformRef.current,
-			waveColor: "#b0bec5",
-			progressColor: "orange",
+			waveColor: theme.palette.mode === "light" ? "#b0bec5" : "#555", // lighter or darker based on mode
+			progressColor: theme.palette.primary.main,
+			cursorColor: theme.palette.primary.main,
 			height: 50,
 			responsive: true,
 			barWidth: 2,
 			barGap: 1,
 			barAlign: "bottom",
-			cursorColor: "orange",
 			normalize: true,
 		});
 
@@ -69,7 +70,7 @@ function WavNowPlayingBar() {
 				wavesurferRef.current = null;
 			}
 		};
-	}, [currentTrack, audioRef]);
+	}, [currentTrack, audioRef, theme.palette.mode]);
 
 	// ✅ Update waveform progress manually
 	useEffect(() => {
@@ -87,9 +88,10 @@ function WavNowPlayingBar() {
 				bottom: 0,
 				left: 0,
 				width: "100%",
-				bgcolor: "background.paper",
+				bgcolor: theme.palette.background.paper,
+				color: theme.palette.text.primary,
 				borderTop: 1,
-				borderColor: "grey.300",
+				borderColor: theme.palette.divider,
 				px: 1.5,
 				py: 1,
 				display: "flex",
@@ -98,9 +100,14 @@ function WavNowPlayingBar() {
 				boxShadow: 5,
 				zIndex: 1500,
 				height: 120,
+				transition: "background-color 0.3s, color 0.3s"
 			}}
 		>
-			<Box component="img" src={currentTrack.artwork || "/defaultArtwork.png"} sx={{ width: 80, height: 80 }} />
+			<Box
+				component="img"
+				src={currentTrack.artwork || "/defaultArtwork.png"}
+				sx={{ width: 80, height: 80, borderRadius: 1 }}
+			/>
 
 			<Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column", gap: 0.3 }}>
 				<Typography variant="subtitle2" fontWeight="bold" sx={{ textDecoration: "underline" }}>
@@ -114,9 +121,9 @@ function WavNowPlayingBar() {
 					<IconButton
 						onClick={togglePlay}
 						sx={{
-							bgcolor: "orange",
-							color: "white",
-							"&:hover": { bgcolor: "darkorange" },
+							bgcolor: theme.palette.primary.main,
+							color: theme.palette.primary.contrastText,
+							"&:hover": { bgcolor: theme.palette.primary.dark },
 							width: 40,
 							height: 40,
 							borderRadius: "50%",
@@ -134,10 +141,24 @@ function WavNowPlayingBar() {
 							const percent = x / rect.width;
 							audioRef.current.currentTime = percent * duration;
 						}}
-						sx={{ flexGrow: 1, bgcolor: "grey.100", borderRadius: 1, height: 50 }}
+						sx={{
+							flexGrow: 1,
+							bgcolor: theme.palette.background.default,
+							borderRadius: 1,
+							height: 50,
+							cursor: "pointer"
+						}}
 					/>
 
-					<IconButton onClick={stopTrack}>
+					<IconButton
+						onClick={stopTrack}
+						sx={{
+							color: theme.palette.text.primary,
+							"&:hover": {
+								color: theme.palette.primary.main
+							}
+						}}
+					>
 						<CloseIcon />
 					</IconButton>
 				</Box>

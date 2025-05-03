@@ -7,14 +7,12 @@ function Home() {
 
 	return (
 		<Box
-			sx={{
-				maxWidth: theme.breakpoints.values.lg,
-				mx: "auto",
-				py: { xs: 4, sm: 6, md: 8 },
-				px: { xs: 2, sm: 4 },
+			sx={(theme) => ({
 				bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.50",
-				color: theme.palette.mode === "dark" ? "grey.50" : "grey.900",
-			}}
+				color: theme.palette.text.primary,
+				px: { xs: 0, md: 6 },
+				py: { xs: 4, md: 8 },
+			})}
 		>
 			{/* HERO SECTION */}
 			<Box sx={{ textAlign: "center", mb: { xs: 5, md: 8 } }}>
@@ -36,7 +34,7 @@ function Home() {
 							borderRadius: "50%",
 							objectFit: "cover",
 							boxShadow: 3,
-							bgcolor: (theme) => (theme.palette.mode === "dark" ? "grey.800" : "grey.200"),
+							bgcolor: theme.palette.background.paper,
 						}}
 					/>
 				</Box>
@@ -47,7 +45,7 @@ function Home() {
 						fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
 						mb: 2,
 						lineHeight: 1.2,
-                        whiteSpace: "normal",
+						whiteSpace: "normal",
 					}}
 				>
 					Welcome to Kris Janowski’s Portfolio
@@ -122,7 +120,8 @@ function Home() {
 						variant="outlined"
 						sx={{
 							height: "100%",
-							bgcolor: theme.palette.mode === "dark" ? "grey.800" : "background.paper",
+							bgcolor: theme.palette.background.paper,
+							color: theme.palette.text.primary,
 						}}
 					>
 						<CardContent>
@@ -144,14 +143,17 @@ function Home() {
 						variant="outlined"
 						sx={{
 							height: "100%",
-							bgcolor: theme.palette.mode === "dark" ? "grey.800" : "background.paper",
+							bgcolor: theme.palette.background.paper,
+							color: theme.palette.text.primary,
 						}}
 					>
 						<CardContent>
 							<Typography variant="h6" fontWeight="bold" gutterBottom>
 								Collaborations
 							</Typography>
-							<Typography sx={{ mb: 2 }}>A collection of tracks created with talented vocalists, instrumentalists, and fellow producers.</Typography>
+							<Typography sx={{ mb: 2 }}>
+								A collection of tracks created with talented vocalists, instrumentalists, and fellow producers.
+							</Typography>
 							<Button variant="contained" component={Link} to="/collaborations" size="small">
 								Explore Collaborations
 							</Button>
@@ -164,7 +166,8 @@ function Home() {
 						variant="outlined"
 						sx={{
 							height: "100%",
-							bgcolor: theme.palette.mode === "dark" ? "grey.800" : "background.paper",
+							bgcolor: theme.palette.background.paper,
+							color: theme.palette.text.primary,
 						}}
 					>
 						<CardContent>
