@@ -1,17 +1,19 @@
 import React from "react";
-import { Box, Typography, Card, CardContent, CardHeader, Grid, Divider } from "@mui/material";
+import { Box, Typography, Card, CardContent, CardHeader, Grid, Divider, useTheme } from "@mui/material";
 import studies from "../data/studies.json";
 import AudioPlayer from "../components/AudioPlayer";
 
 function Studies() {
+	const theme = useTheme();
+
 	return (
 		<Box
-			sx={(theme) => ({
+			sx={{
 				bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.50",
 				color: theme.palette.text.primary,
 				px: { xs: 2, md: 6 },
 				py: { xs: 4, md: 8 },
-			})}
+			}}
 		>
 			<Typography
 				variant="h4"
@@ -41,7 +43,7 @@ function Studies() {
 			<Grid container spacing={4}>
 				{studies.map(
 					(
-						{ title = title.length > 30 ? `${title.slice(0, 30)}...` : title, description, problem, beforeUrl, afterUrl, conclusion },
+						{ title, description, problem, beforeUrl, afterUrl, conclusion },
 						idx
 					) => (
 						<Grid item xs={12} key={idx}>
@@ -61,7 +63,7 @@ function Studies() {
 											color: "text.secondary",
 										},
 									}}
-									title={title}
+									title={title.length > 30 ? `${title.slice(0, 30)}...` : title}
 									subheader={description}
 								/>
 								<CardContent>
@@ -87,11 +89,27 @@ function Studies() {
 
 									<Grid container spacing={3}>
 										<Grid item xs={12} md={6}>
-											<AudioPlayer src={beforeUrl} label="Before" />
+											<AudioPlayer
+												src={beforeUrl}
+												label="Before"
+												bgcolor={
+													theme.palette.mode === "dark"
+														? "rgba(139, 0, 0, 0.2)"  // Dark red tint
+														: "rgba(255, 0, 0, 0.1)"  // Light red tint
+												}
+											/>
 										</Grid>
 
 										<Grid item xs={12} md={6}>
-											<AudioPlayer src={afterUrl} label="After" />
+											<AudioPlayer
+												src={afterUrl}
+												label="After"
+												bgcolor={
+													theme.palette.mode === "dark"
+														? "rgba(0, 100, 0, 0.2)"  // Dark green tint
+														: "rgba(0, 128, 0, 0.1)"  // Light green tint
+												}
+											/>
 										</Grid>
 									</Grid>
 

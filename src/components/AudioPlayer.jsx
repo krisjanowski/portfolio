@@ -4,7 +4,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { useGlobalAudioManager } from "../contexts/GlobalAudioManagerContext";
 import { useWavPlayer } from "../contexts/WavPlayerContext";
 
-function AudioPlayer({ src, label, artwork }) {
+function AudioPlayer({ src, label, artwork, bgcolor }) {
 	const { playWavTrack } = useGlobalAudioManager();
 	const { currentTrack } = useWavPlayer();
 
@@ -17,9 +17,9 @@ function AudioPlayer({ src, label, artwork }) {
 	return (
 		<Box
 			sx={{
-				bgcolor: "background.paper",
+				bgcolor: bgcolor || "background.paper", // 🔥 Use prop or default
 				border: 1,
-				borderColor: "grey.300",
+				borderColor: (theme) => theme.palette.mode === "dark" ? "grey.700" : "grey.300",
 				borderRadius: 2,
 				px: 1.5,
 				py: 1,
@@ -82,12 +82,12 @@ function AudioPlayer({ src, label, artwork }) {
 
 			<style>
 				{`
-          @keyframes wave {
-            0% { transform: scaleY(1); }
-            50% { transform: scaleY(1.5); }
-            100% { transform: scaleY(1); }
-          }
-        `}
+					@keyframes wave {
+						0% { transform: scaleY(1); }
+						50% { transform: scaleY(1.5); }
+						100% { transform: scaleY(1); }
+					}
+				`}
 			</style>
 		</Box>
 	);
