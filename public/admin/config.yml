@@ -15,15 +15,9 @@ collections:
         widget: "list"
         fields:
           - { label: "Category", name: "category", widget: "string" }
-          - label: "Title"
-            name: "title"
-            widget: "string"
-          - label: "Embed URL"
-            name: "embedUrl"
-            widget: "string"
-          - label: "Description"
-            name: "description"
-            widget: "text"
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Embed URL", name: "embedUrl", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
 
   - name: "studies"
     label: "Studies & Experiments"
