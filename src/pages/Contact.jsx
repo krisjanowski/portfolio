@@ -18,7 +18,7 @@ function Contact() {
 	const responseRef = useRef(null);
 
 	// 👉 Replace this with your actual Formspree endpoint:
-	const formEndpoint = "https://formspree.io/f/yourformid";
+	const formEndpoint = "https://formspree.io/f/mdkgevwe";
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
