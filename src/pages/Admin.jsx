@@ -11,15 +11,22 @@ export default function Admin() {
                 document.body.appendChild(root);
             }
 
-            // Init CMS on that root
-            CMS.init({ root });
+            // Init CMS with explicit config.json to prevent auto-detect issues
+            CMS.init({
+                root,
+                config: '/admin/config.json'
+            });
 
             // OPTIONAL: Mutation observer to remove Decap error box if it appears
             const observer = new MutationObserver(() => {
                 const errorBox = document.querySelector("h1");
-                if (errorBox && errorBox.textContent.includes("Error")) {
+                if (
+                    errorBox &&
+                    errorBox.textContent.includes("Error") &&
+                    errorBox.parentElement
+                ) {
                     console.warn("Decap CMS error detected - removing error box from DOM.");
-                    errorBox.parentElement?.remove();
+                    errorBox.parentElement.remove();
                 }
             });
 
