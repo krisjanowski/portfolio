@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Box, Container, CssBaseline, useTheme } from "@mui/material";
 import "./App.css";
@@ -18,72 +18,69 @@ import WavNowPlayingBar from "./components/WavNowPlayingBar";
 import { GlobalAudioManagerProvider } from "./contexts/GlobalAudioManagerContext";
 import ScrollToTop from "./components/ScrollToTop";
 
-const Admin = lazy(() => import("./pages/Admin"));
+// Directly import AdminPage for routing without lazy loading
+import AdminPage from "./pages/AdminPage";
 
 function AppContent({ toggleMode, mode }) {
-	const theme = useTheme();
-	const location = useLocation();
-	const isAdmin = location.pathname.startsWith("/admin");
+  const theme = useTheme();
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith("/admin");
 
-	// ✅ If we're on the /admin path, ONLY render the CMS (absolutely nothing else)
-	if (isAdmin) {
-		return (
-			<Suspense fallback={<div>Loading Admin...</div>}>
-				<Admin />
-			</Suspense>
-		);
-	}
+  // If we're on the /admin path, render the CMS (AdminPage), otherwise render the main app
+  if (isAdmin) {
+    return <AdminPage />;  // Directly render AdminPage for the admin route
+  }
 
-	// ✅ Otherwise, render the full app shell
-	return (
-		<Box
-			sx={{
-				minHeight: "100vh",
-				display: "flex",
-				flexDirection: "column",
-				bgcolor: theme.palette.background.default,
-				color: theme.palette.text.primary,
-				transition: "background-color 0.2s, color 0.2s",
-			}}
-		>
-			<Navbar toggleMode={toggleMode} mode={mode} />
-			<SoundCloudNowPlayingBar />
-			<WavNowPlayingBar />
-			<Container
-				sx={{
-					flex: 1,
-					maxWidth: { xs: "100%", sm: "100%", md: "85%", lg: "1200px" },
-					width: "100%",
-					py: { xs: 1, sm: 2, md: 8 },
-				}}
-			>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/solo-projects" element={<SoloProjects />} />
-					<Route path="/collaborations" element={<Collaborations />} />
-					<Route path="/studies" element={<Studies />} />
-					<Route path="/contact" element={<Contact />} />
-				</Routes>
-			</Container>
-			<Footer />
-		</Box>
-	);
+  // Otherwise, render the rest of the app shell
+  return (
+    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        bgcolor: theme.palette.background.default,
+        color: theme.palette.text.primary,
+        transition: "background-color 0.2s, color 0.2s",
+      }}
+    >
+      <Navbar toggleMode={toggleMode} mode={mode} />
+      <SoundCloudNowPlayingBar />
+      <WavNowPlayingBar />
+      <Container
+        sx={{
+          flex: 1,
+          maxWidth: { xs: "100%", sm: "100%", md: "85%", lg: "1200px" },
+          width: "100%",
+          py: { xs: 1, sm: 2, md: 8 },
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/solo-projects" element={<SoloProjects />} />
+          <Route path="/collaborations" element={<Collaborations />} />
+          <Route path="/studies" element={<Studies />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Container>
+      <Footer />
+    </Box>
+  );
 }
 
 function App({ toggleMode, mode }) {
-	return (
-		<WavPlayerProvider>
-			<SoundCloudPlayerProvider>
-				<GlobalAudioManagerProvider>
-					<Router>
-						<ScrollToTop />
-						<CssBaseline />
-						<AppContent toggleMode={toggleMode} mode={mode} />
-					</Router>
-				</GlobalAudioManagerProvider>
-			</SoundCloudPlayerProvider>
-		</WavPlayerProvider>
-	);
+  return (
+    <WavPlayerProvider>
+      <SoundCloudPlayerProvider>
+        <GlobalAudioManagerProvider>
+          <Router>
+            <ScrollToTop />
+            <CssBaseline />
+            <AppContent toggleMode={toggleMode} mode={mode} />
+          </Router>
+        </GlobalAudioManagerProvider>
+      </SoundCloudPlayerProvider>
+    </WavPlayerProvider>
+  );
 }
 
 export default App;

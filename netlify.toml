@@ -1,2 +1,4 @@
-[build]
-  plugins = ["./netlify/plugins/debug-config-fetch.js"]
+[[redirects]]
+  from = "/admin/*"
+  to = "/index.html"
+  status = 200
