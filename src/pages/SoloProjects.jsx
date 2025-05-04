@@ -81,7 +81,7 @@ function SoloProjects() {
 					</Typography>
 
 					<Grid container spacing={4}>
-						{projects.map(({ title, embedUrl, description }, idx) => (
+						{projects.map(({ title, embedUrl, description, image }, idx) => (
 							<Grid item xs={12} sm={6} md={6} key={embedUrl + idx}>
 								<Card
 									variant="outlined"
@@ -102,7 +102,11 @@ function SoloProjects() {
 										{embedUrl.includes("soundcloud.com") ? (
 											<SoundCloudEmbed embedUrl={embedUrl} title={title} description={description} />
 										) : (
-											<AudioPlayer src={embedUrl} label={title} />
+											<AudioPlayer
+												src={embedUrl}
+												label={title}
+												artwork={embedUrl.endsWith(".wav") ? image : undefined}
+											/>
 										)}
 
 										<Typography variant="body2" sx={{ mt: 2 }}>
