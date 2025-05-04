@@ -11,9 +11,10 @@ collections:
     label: "Solo Projects"
     label_singular: "Solo Project"
     files:
-      - file: "src/data/soloProjects.json"
+      - file: "public/uploads/soloProjects.json"
         label: "Solo Projects List"
         name: "solo_projects"
+        format: "json"
         fields:
           - label: "Projects"
             name: "projects"
@@ -27,9 +28,10 @@ collections:
     label: "Collaborations"
     label_singular: "Collaboration"
     files:
-      - file: "src/data/collaborations.json"
+      - file: "public/uploads/collaborations.json"
         label: "Collaborations List"
         name: "collaborations"
+        format: "json"
         fields:
           - label: "Collaborations"
             name: "collaborations"
@@ -43,9 +45,10 @@ collections:
     label: "Studies"
     label_singular: "Study"
     files:
-      - file: "src/data/studies.json"
+      - file: "public/uploads/studies.json"
         label: "Studies List"
         name: "studies"
+        format: "json"
         fields:
           - label: "Studies"
             name: "studies"

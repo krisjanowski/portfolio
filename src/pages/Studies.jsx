@@ -1,10 +1,40 @@
-import React from "react";
-import { Box, Typography, Card, CardContent, CardHeader, Grid, Divider, useTheme, Button } from "@mui/material";
-import studies from "../data/studies.json";
+import React, { useState, useEffect } from "react";
+import { Box, Typography, Card, CardContent, CardHeader, Grid, Divider, useTheme, CircularProgress } from "@mui/material";
 import AudioPlayer from "../components/AudioPlayer";
 
 function Studies() {
 	const theme = useTheme();
+	const [studies, setStudies] = useState([]);
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		fetch("/uploads/studies.json")
+			.then((res) => res.json())
+			.then((data) => {
+				setStudies(data.studies || []);
+				setLoading(false);
+			})
+			.catch((err) => {
+				console.error("Failed to load studies.json:", err);
+				setLoading(false);
+			});
+	}, []);
+
+	if (loading) {
+		return (
+			<Box sx={{ p: 6, textAlign: "center" }}>
+				<CircularProgress />
+			</Box>
+		);
+	}
+
+	if (!studies.length) {
+		return (
+			<Box sx={{ p: 6, textAlign: "center" }}>
+				<Typography>No studies available.</Typography>
+			</Box>
+		);
+	}
 
 	return (
 		<Box
@@ -41,7 +71,7 @@ function Studies() {
 
 			<Grid container spacing={4}>
 				{studies.map((item, idx) => {
-					const type = item.type || "study"; // default to study
+					const type = item.type || "study";
 
 					return (
 						<Grid item xs={12} key={idx}>

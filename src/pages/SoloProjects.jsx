@@ -1,10 +1,42 @@
-import React from "react";
-import { Box, Typography, Grid, Card, CardContent, CardHeader } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { Box, Typography, Grid, Card, CardContent, CardHeader, CircularProgress } from "@mui/material";
 import SoundCloudEmbed from "../components/SoundCloudEmbed.jsx";
 import AudioPlayer from "../components/AudioPlayer.jsx";
-import soloProjects from "../data/soloProjects.json";
 
 function SoloProjects() {
+	const [projects, setProjects] = useState([]);
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		fetch("/uploads/soloProjects.json")
+			.then((res) => res.json())
+			.then((data) => {
+				setProjects(data.projects || []);
+				setLoading(false);
+			})
+			.catch((err) => {
+				console.error("Failed to load soloProjects.json:", err);
+				setLoading(false);
+			});
+	}, []);
+
+	// Group by category
+	const grouped = projects.reduce((acc, project) => {
+		if (!acc[project.category]) {
+			acc[project.category] = [];
+		}
+		acc[project.category].push(project);
+		return acc;
+	}, {});
+
+	if (loading) {
+		return (
+			<Box sx={{ p: 6, textAlign: "center" }}>
+				<CircularProgress />
+			</Box>
+		);
+	}
+
 	return (
 		<Box
 			sx={(theme) => ({
@@ -32,7 +64,8 @@ function SoloProjects() {
 				piece is carefully crafted to push creative boundaries and evoke powerful responses.
 			</Typography>
 
-			{Object.entries(soloProjects).map(([category, projects]) => (
+			{/* Loop through categories */}
+			{Object.entries(grouped).map(([category, projects]) => (
 				<Box key={category} sx={{ mb: 6 }}>
 					<Typography
 						variant="h5"
@@ -65,7 +98,6 @@ function SoloProjects() {
 										sx={{ pb: 0 }}
 									/>
 									<CardContent sx={{ flexGrow: 1 }}>
-
 										{/* 🔥 Decide which player to show */}
 										{embedUrl.includes("soundcloud.com") ? (
 											<SoundCloudEmbed embedUrl={embedUrl} title={title} description={description} />

@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # or "master" if that's your branch name
+  branch: main
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -8,33 +8,29 @@ public_folder: "/uploads"
 collections:
   - name: "soloProjects"
     label: "Solo Projects"
-    folder: "src/data"
-    files:
-      - file: "src/data/soloProjects.json"
-        label: "Solo Projects JSON"
-        name: "solo_projects"
+    file: "public/uploads/soloProjects.json"
+    fields:
+      - label: "Projects"
+        name: "projects"
+        widget: "list"
         fields:
-          - label: "Categories"
-            name: "categories"
-            widget: "list"
-            fields:
-              - label: "Category Name"
-                name: "category"
-                widget: "string"
-              - label: "Projects"
-                name: "projects"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Embed URL", name: "embedUrl", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
+          - { label: "Category", name: "category", widget: "string" }
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Embed URL"
+            name: "embedUrl"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
 
   - name: "studies"
     label: "Studies & Experiments"
-    file: "src/data/studies.json"
+    file: "public/uploads/studies.json"
     fields:
-      - label: "Items"
-        name: "items"
+      - label: "Studies"
+        name: "studies"
         widget: "list"
         fields:
           - { label: "Type", name: "type", widget: "select", options: ["study", "experiment"] }
@@ -48,7 +44,7 @@ collections:
 
   - name: "testimonials"
     label: "Testimonials"
-    file: "src/data/testimonials.json"
+    file: "public/uploads/testimonials.json"
     fields:
       - label: "Testimonials"
         name: "testimonials"
@@ -61,7 +57,7 @@ collections:
 
   - name: "collaborations"
     label: "Collaborations"
-    file: "src/data/collaborations.json"
+    file: "public/uploads/collaborations.json"
     fields:
       - label: "Collaborations"
         name: "collaborations"

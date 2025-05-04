@@ -1,12 +1,27 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Avatar, IconButton, useTheme, Fade, Paper } from "@mui/material";
+import { Box, Typography, Avatar, IconButton, useTheme, Fade, Paper, CircularProgress } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import testimonials from "../data/testimonials.json";
 
 function Testimonials() {
 	const theme = useTheme();
+	const [testimonials, setTestimonials] = useState([]);
 	const [index, setIndex] = useState(0);
+	const [loading, setLoading] = useState(true);
+
+	// ✅ Load JSON dynamically at runtime
+	useEffect(() => {
+		fetch("/uploads/testimonials.json")
+			.then((res) => res.json())
+			.then((data) => {
+				setTestimonials(data.testimonials || []);  // ✅ UPDATED
+				setLoading(false);
+			})
+			.catch((err) => {
+				console.error("Failed to load testimonials.json:", err);
+				setLoading(false);
+			});
+	}, []);
 
 	const handleNext = () => {
 		setIndex((prev) => (prev + 1) % testimonials.length);
@@ -16,14 +31,32 @@ function Testimonials() {
 		setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 	};
 
-	// ✅ Auto-advance every 8 seconds
+	// ✅ Auto-advance every 8 seconds (only when testimonials loaded)
 	useEffect(() => {
+		if (!testimonials.length) return;
+
 		const interval = setInterval(() => {
 			setIndex((prev) => (prev + 1) % testimonials.length);
 		}, 8000);
 
 		return () => clearInterval(interval);
-	}, [testimonials.length]);
+	}, [testimonials]);
+
+	if (loading) {
+		return (
+			<Box sx={{ p: 6, textAlign: "center" }}>
+				<CircularProgress />
+			</Box>
+		);
+	}
+
+	if (!testimonials.length) {
+		return (
+			<Box sx={{ p: 6, textAlign: "center" }}>
+				<Typography>No testimonials available.</Typography>
+			</Box>
+		);
+	}
 
 	const { name, role, testimonial, avatar } = testimonials[index];
 
@@ -44,7 +77,7 @@ function Testimonials() {
 						flexDirection: "column",
 						alignItems: "center",
 						gap: 2,
-						position: "relative"
+						position: "relative",
 					}}
 				>
 					<Avatar
@@ -56,7 +89,7 @@ function Testimonials() {
 							fontSize: 40,
 						}}
 					>
-						{!avatar && name[0]}
+						{!avatar && name ? name[0] : ""}
 					</Avatar>
 
 					<Typography
@@ -78,12 +111,11 @@ function Testimonials() {
 						{role}
 					</Typography>
 
-					{/* Controls tightly aligned inline below */}
+					{/* Controls */}
 					<Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1, mt: 2 }}>
 						<IconButton onClick={handlePrev} aria-label="Previous" size="small">
 							<ArrowBackIosNewIcon fontSize="small" />
 						</IconButton>
-						{/* Optional: small dot indicators */}
 						{testimonials.map((_, i) => (
 							<Box
 								key={i}

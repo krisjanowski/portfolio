@@ -1,9 +1,40 @@
-import React from "react";
-import { Box, Typography, Grid, Card, CardHeader, CardContent } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { Box, Typography, Grid, Card, CardHeader, CardContent, CircularProgress } from "@mui/material";
 import SoundCloudEmbed from "../components/SoundCloudEmbed.jsx";
-import collabs from "../data/collaborations.json";
 
 function Collaborations() {
+	const [collaborations, setCollaborations] = useState([]);
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		fetch("/uploads/collaborations.json")
+			.then((res) => res.json())
+			.then((data) => {
+				setCollaborations(data.collaborations || []);
+				setLoading(false);
+			})
+			.catch((err) => {
+				console.error("Failed to load collaborations.json:", err);
+				setLoading(false);
+			});
+	}, []);
+
+	if (loading) {
+		return (
+			<Box sx={{ p: 6, textAlign: "center" }}>
+				<CircularProgress />
+			</Box>
+		);
+	}
+
+	if (!collaborations.length) {
+		return (
+			<Box sx={{ p: 6, textAlign: "center" }}>
+				<Typography>No collaborations available.</Typography>
+			</Box>
+		);
+	}
+
 	return (
 		<Box
 			sx={(theme) => ({
@@ -39,7 +70,7 @@ function Collaborations() {
 			</Typography>
 
 			<Grid container spacing={4}>
-				{collabs.map(({ title, embedUrl, description }, idx) => (
+				{collaborations.map(({ title, embedUrl, description }, idx) => (
 					<Grid
 						item
 						xs={12}
