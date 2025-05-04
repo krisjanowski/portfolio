@@ -14,9 +14,10 @@ export default function Admin() {
         // Init CMS with explicit config.json and prevent auto-detect
         CMS.init({
             root,
-            config: '/admin/config.json',
-            load_config_file: false // stops auto-fetching config.yml
-        });
+            config: '/admin/config.json', // Explicit path
+            load_config_file: false, // Prevent automatic config.yml loading
+            disable_config_fetching: true, // Ensures the CMS doesn't try to fetch a config file
+          });
 
         // OPTIONAL: Mutation observer to remove Decap error box if it appears
         const observer = new MutationObserver(() => {
