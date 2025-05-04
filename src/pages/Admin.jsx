@@ -11,10 +11,11 @@ export default function Admin() {
                 document.body.appendChild(root);
             }
 
-            // Init CMS with explicit config.json to prevent auto-detect issues
+            // Init CMS with explicit config.json and prevent auto-detect
             CMS.init({
                 root,
-                config: '/admin/config.json'
+                config: '/admin/config.json',
+                load_config_file: false // 🚨 stops DecapCMS from trying to auto-load config.yml
             });
 
             // OPTIONAL: Mutation observer to remove Decap error box if it appears
