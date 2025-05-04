@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent, CardHeader } from "@mui/material";
 import SoundCloudEmbed from "../components/SoundCloudEmbed.jsx";
+import AudioPlayer from "../components/AudioPlayer.jsx";
 import soloProjects from "../data/soloProjects.json";
 
 function SoloProjects() {
@@ -31,33 +32,57 @@ function SoloProjects() {
 				piece is carefully crafted to push creative boundaries and evoke powerful responses.
 			</Typography>
 
-			<Grid container spacing={4}>
-				{soloProjects.map(({ title, embedUrl, description }, idx) => (
-					<Grid item xs={12} sm={6} md={6} key={embedUrl}>
-						<Card
-							variant="outlined"
-							sx={{
-								height: "100%",
-								display: "flex",
-								flexDirection: "column",
-								bgcolor: "background.paper",
-							}}
-						>
-							<CardHeader
-								titleTypographyProps={{ variant: "h6", fontWeight: "bold" }}
-								title={title.length > 30 ? `${title.slice(0, 30)}...` : title}
-								sx={{ pb: 0 }}
-							/>
-							<CardContent sx={{ flexGrow: 1 }}>
-								<SoundCloudEmbed embedUrl={embedUrl} title={title} description={description} />
-								<Typography variant="body2" sx={{ mt: 2 }}>
-									{description}
-								</Typography>
-							</CardContent>
-						</Card>
+			{Object.entries(soloProjects).map(([category, projects]) => (
+				<Box key={category} sx={{ mb: 6 }}>
+					<Typography
+						variant="h5"
+						sx={{
+							fontWeight: "bold",
+							mb: 3,
+							borderBottom: 2,
+							borderColor: "divider",
+							pb: 1
+						}}
+					>
+						{category}
+					</Typography>
+
+					<Grid container spacing={4}>
+						{projects.map(({ title, embedUrl, description }, idx) => (
+							<Grid item xs={12} sm={6} md={6} key={embedUrl + idx}>
+								<Card
+									variant="outlined"
+									sx={{
+										height: "100%",
+										display: "flex",
+										flexDirection: "column",
+										bgcolor: "background.paper",
+									}}
+								>
+									<CardHeader
+										titleTypographyProps={{ variant: "h6", fontWeight: "bold" }}
+										title={title.length > 30 ? `${title.slice(0, 30)}...` : title}
+										sx={{ pb: 0 }}
+									/>
+									<CardContent sx={{ flexGrow: 1 }}>
+
+										{/* 🔥 Decide which player to show */}
+										{embedUrl.includes("soundcloud.com") ? (
+											<SoundCloudEmbed embedUrl={embedUrl} title={title} description={description} />
+										) : (
+											<AudioPlayer src={embedUrl} label={title} />
+										)}
+
+										<Typography variant="body2" sx={{ mt: 2 }}>
+											{description}
+										</Typography>
+									</CardContent>
+								</Card>
+							</Grid>
+						))}
 					</Grid>
-				))}
-			</Grid>
+				</Box>
+			))}
 		</Box>
 	);
 }

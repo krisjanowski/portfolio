@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid, Button, Card, CardContent, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
+import Testimonials from "../components/testimonials";
 
 function Home() {
 	const theme = useTheme();
@@ -195,6 +196,7 @@ function Home() {
 				>
 					Ready to collaborate or need an expert touch for your next project?
 				</Typography>
+                <Testimonials />
 				<Button variant="outlined" size="large" component={Link} to="/contact">
 					Contact Kris
 				</Button>

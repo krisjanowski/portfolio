@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Card, CardContent, CardHeader, Grid, Divider, useTheme } from "@mui/material";
+import { Box, Typography, Card, CardContent, CardHeader, Grid, Divider, useTheme, Button } from "@mui/material";
 import studies from "../data/studies.json";
 import AudioPlayer from "../components/AudioPlayer";
 
@@ -25,7 +25,7 @@ function Studies() {
 					lineHeight: 1.2,
 				}}
 			>
-				Studies
+				Studies & Experiments
 			</Typography>
 
 			<Typography
@@ -36,16 +36,14 @@ function Studies() {
 					lineHeight: 1.6,
 				}}
 			>
-				My academic work blends scientific research with creative audio exploration — from psychoacoustics to spatial perception. Each study
-				below shows the “before” problem mix and the “after” solution.
+				My academic work blends scientific research with creative audio exploration — from psychoacoustics to spatial perception.
 			</Typography>
 
 			<Grid container spacing={4}>
-				{studies.map(
-					(
-						{ title, description, problem, beforeUrl, afterUrl, conclusion },
-						idx
-					) => (
+				{studies.map((item, idx) => {
+					const type = item.type || "study"; // default to study
+
+					return (
 						<Grid item xs={12} key={idx}>
 							<Card variant="outlined" sx={{ bgcolor: "background.paper" }}>
 								<CardHeader
@@ -63,81 +61,110 @@ function Studies() {
 											color: "text.secondary",
 										},
 									}}
-									title={title.length > 30 ? `${title.slice(0, 30)}...` : title}
-									subheader={description}
+									title={item.title.length > 30 ? `${item.title.slice(0, 30)}...` : item.title}
+									subheader={item.description}
 								/>
+
 								<CardContent>
-									<Typography
-										variant="subtitle2"
-										sx={{
-											mb: 1,
-											color: "text.secondary",
-											fontSize: { xs: "0.95rem", sm: "1rem" },
-										}}
-									>
-										Problem
-									</Typography>
-									<Typography
-										sx={{
-											mb: 2,
-											fontSize: { xs: "1rem", sm: "1.125rem" },
-											lineHeight: 1.5,
-										}}
-									>
-										{problem}
-									</Typography>
+									{type === "study" && (
+										<>
+											<Typography
+												variant="subtitle2"
+												sx={{
+													mb: 1,
+													color: "text.secondary",
+													fontSize: { xs: "0.95rem", sm: "1rem" },
+												}}
+											>
+												Problem
+											</Typography>
+											<Typography
+												sx={{
+													mb: 2,
+													fontSize: { xs: "1rem", sm: "1.125rem" },
+													lineHeight: 1.5,
+												}}
+											>
+												{item.problem}
+											</Typography>
 
-									<Grid container spacing={3}>
-										<Grid item xs={12} md={6}>
-											<AudioPlayer
-												src={beforeUrl}
-												label="Before"
-												bgcolor={
-													theme.palette.mode === "dark"
-														? "rgba(139, 0, 0, 0.2)"  // Dark red tint
-														: "rgba(255, 0, 0, 0.1)"  // Light red tint
-												}
-											/>
-										</Grid>
+											<Grid container spacing={3}>
+												<Grid item xs={12} md={6}>
+													<AudioPlayer
+														src={item.beforeUrl}
+														label="Before"
+														bgcolor={theme.palette.mode === "dark" ? "rgba(139, 0, 0, 0.2)" : "rgba(255, 0, 0, 0.1)"}
+													/>
+												</Grid>
 
-										<Grid item xs={12} md={6}>
-											<AudioPlayer
-												src={afterUrl}
-												label="After"
-												bgcolor={
-													theme.palette.mode === "dark"
-														? "rgba(0, 100, 0, 0.2)"  // Dark green tint
-														: "rgba(0, 128, 0, 0.1)"  // Light green tint
-												}
-											/>
-										</Grid>
-									</Grid>
+												<Grid item xs={12} md={6}>
+													<AudioPlayer
+														src={item.afterUrl}
+														label="After"
+														bgcolor={theme.palette.mode === "dark" ? "rgba(0, 100, 0, 0.2)" : "rgba(0, 128, 0, 0.1)"}
+													/>
+												</Grid>
+											</Grid>
 
-									<Divider sx={{ my: { xs: 2, sm: 3 } }} />
+											<Divider sx={{ my: { xs: 2, sm: 3 } }} />
 
-									<Typography
-										variant="subtitle2"
-										sx={{
-											mb: 1,
-											color: "text.secondary",
-											fontSize: { xs: "0.95rem", sm: "1rem" },
-										}}
-									>
-										Conclusion
-									</Typography>
-									<Typography
-										sx={{
-											fontSize: { xs: "1rem", sm: "1.125rem" },
-											lineHeight: 1.5,
-										}}
-									>
-										{conclusion}
-									</Typography>
+											<Typography
+												variant="subtitle2"
+												sx={{
+													mb: 1,
+													color: "text.secondary",
+													fontSize: { xs: "0.95rem", sm: "1rem" },
+												}}
+											>
+												Conclusion
+											</Typography>
+											<Typography
+												sx={{
+													fontSize: { xs: "1rem", sm: "1.125rem" },
+													lineHeight: 1.5,
+												}}
+											>
+												{item.conclusion}
+											</Typography>
+										</>
+									)}
+
+									{type === "experiment" && (
+										<>
+											{item.url && (
+												<AudioPlayer
+													src={item.url}
+													label="Audio"
+													bgcolor={theme.palette.mode === "dark" ? "rgba(139, 0, 0, 0.2)" : "rgba(255, 0, 0, 0.1)"}
+												/>
+											)}
+											<Divider sx={{ my: { xs: 2, sm: 3 } }} />
+
+											<Typography
+												variant="subtitle2"
+												sx={{
+													mb: 1,
+													color: "text.secondary",
+													fontSize: { xs: "0.95rem", sm: "1rem" },
+												}}
+											>
+												Conclusion
+											</Typography>
+											<Typography
+												sx={{
+													fontSize: { xs: "1rem", sm: "1.125rem" },
+													lineHeight: 1.5,
+												}}
+											>
+												{item.conclusion}
+											</Typography>
+										</>
+									)}
 								</CardContent>
 							</Card>
 						</Grid>
-					)
-				)}
+					);
+				})}
 			</Grid>
 		</Box>
 	);
