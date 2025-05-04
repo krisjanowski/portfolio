@@ -19,17 +19,10 @@ import { GlobalAudioManagerProvider } from "./contexts/GlobalAudioManagerContext
 import ScrollToTop from "./components/ScrollToTop";
 
 // Directly import AdminPage for routing without lazy loading
-import AdminPage from "./pages/AdminPage";
 
 function AppContent({ toggleMode, mode }) {
   const theme = useTheme();
   const location = useLocation();
-  const isAdmin = location.pathname.startsWith("/admin");
-
-  // If we're on the /admin path, render the CMS (AdminPage), otherwise render the main app
-  if (isAdmin) {
-    return <AdminPage />;  // Directly render AdminPage for the admin route
-  }
 
   // Otherwise, render the rest of the app shell
   return (
