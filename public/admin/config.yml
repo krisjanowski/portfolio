@@ -1,11 +1,12 @@
 backend:
   name: git-gateway
   repo: krisjanowski/portfolio
-  site_id: 5cd0814e-be45-4169-bccd-458824b71502
   branch: main
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
+media_library:
+  name: default
 
 collections:
   - name: "soloProjects"
