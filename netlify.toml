@@ -1,0 +1,2 @@
+[build]
+  plugins = ["./netlify/plugins/debug-config-fetch.js"]
