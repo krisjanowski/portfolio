@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Grid, Card, CardHeader, CardContent, CircularProgress } from "@mui/material";
 import SoundCloudEmbed from "../components/SoundCloudEmbed.jsx";
-import { Link } from "react-router-dom";  // NEW
+import { Link } from "react-router-dom"; // NEW
+import AudioPlayer from "../components/AudioPlayer.jsx";
 
 function slugify(text) {
 	return text
@@ -109,17 +110,18 @@ function Collaborations() {
 										},
 									}}
 									title={
-										<Link
-											to={`/collaborations/${linkSlug}`}
-											style={{ textDecoration: "none", color: "inherit" }}
-										>
+										<Link to={`/collaborations/${linkSlug}`} style={{ textDecoration: "none", color: "inherit" }}>
 											{title.length > 30 ? `${title.slice(0, 30)}...` : title}
 										</Link>
 									}
 									sx={{ pb: 0 }}
 								/>
 								<CardContent sx={{ flexGrow: 1 }}>
-									<SoundCloudEmbed embedUrl={embedUrl} />
+									{embedUrl.includes("soundcloud.com") ? (
+										<SoundCloudEmbed embedUrl={embedUrl} title={title} description={description} />
+									) : (
+										<AudioPlayer src={embedUrl} label={title} artwork={embedUrl.endsWith(".wav") ? image : undefined} />
+									)}
 									<Typography
 										variant="body2"
 										sx={{
