@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Grid, Card, CardHeader, CardContent, CircularProgress } from "@mui/material";
 import SoundCloudEmbed from "../components/SoundCloudEmbed.jsx";
+import { Link } from "react-router-dom";  // NEW
+
+function slugify(text) {
+	return text
+		.toString()
+		.toLowerCase()
+		.trim()
+		.replace(/[\s\W-]+/g, "-");
+}
 
 function Collaborations() {
 	const [collaborations, setCollaborations] = useState([]);
@@ -70,51 +79,62 @@ function Collaborations() {
 			</Typography>
 
 			<Grid container spacing={4}>
-				{collaborations.map(({ title, embedUrl, description }, idx) => (
-					<Grid
-						item
-						xs={12}
-						sm={12}
-						md={6} // Full width on mobile/tablets, side-by-side on desktops
-						key={idx}
-					>
-						<Card
-							variant="outlined"
-							sx={{
-								height: "100%",
-								display: "flex",
-								flexDirection: "column",
-								bgcolor: "background.paper",
-							}}
+				{collaborations.map(({ title, embedUrl, description, slug }, idx) => {
+					const linkSlug = slug ? slug : slugify(title);
+
+					return (
+						<Grid
+							item
+							xs={12}
+							sm={12}
+							md={6} // Full width on mobile/tablets, side-by-side on desktops
+							key={embedUrl + idx}
 						>
-							<CardHeader
-								titleTypographyProps={{
-									variant: "h6",
-									sx: {
-										fontWeight: "bold",
-										fontSize: { xs: "1.125rem", sm: "1.25rem", md: "1.5rem" },
-										lineHeight: 1.3,
-									},
+							<Card
+								variant="outlined"
+								sx={{
+									height: "100%",
+									display: "flex",
+									flexDirection: "column",
+									bgcolor: "background.paper",
 								}}
-								title={title.length > 30 ? `${title.slice(0, 30)}...` : title}
-								sx={{ pb: 0 }}
-							/>
-							<CardContent sx={{ flexGrow: 1 }}>
-								<SoundCloudEmbed embedUrl={embedUrl} />
-								<Typography
-									variant="body2"
-									sx={{
-										mt: 2,
-										fontSize: { xs: "0.95rem", sm: "1rem" },
-										lineHeight: 1.6,
+							>
+								<CardHeader
+									titleTypographyProps={{
+										variant: "h6",
+										sx: {
+											fontWeight: "bold",
+											fontSize: { xs: "1.125rem", sm: "1.25rem", md: "1.5rem" },
+											lineHeight: 1.3,
+										},
 									}}
-								>
-									{description}
-								</Typography>
-							</CardContent>
-						</Card>
-					</Grid>
-				))}
+									title={
+										<Link
+											to={`/collaborations/${linkSlug}`}
+											style={{ textDecoration: "none", color: "inherit" }}
+										>
+											{title.length > 30 ? `${title.slice(0, 30)}...` : title}
+										</Link>
+									}
+									sx={{ pb: 0 }}
+								/>
+								<CardContent sx={{ flexGrow: 1 }}>
+									<SoundCloudEmbed embedUrl={embedUrl} />
+									<Typography
+										variant="body2"
+										sx={{
+											mt: 2,
+											fontSize: { xs: "0.95rem", sm: "1rem" },
+											lineHeight: 1.6,
+										}}
+									>
+										{description}
+									</Typography>
+								</CardContent>
+							</Card>
+						</Grid>
+					);
+				})}
 			</Grid>
 		</Box>
 	);

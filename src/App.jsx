@@ -10,6 +10,9 @@ import SoloProjects from "./pages/SoloProjects";
 import Collaborations from "./pages/Collaborations";
 import Studies from "./pages/Studies";
 import Contact from "./pages/Contact";
+import ProjectPage from "./pages/ProjectPage";
+import CollaborationPage from "./pages/CollaborationPage";
+import StudyPage from "./pages/StudyPage";
 
 import SoundCloudNowPlayingBar from "./components/SoundCloudNowPlayingBar";
 import { SoundCloudPlayerProvider } from "./contexts/SoundCloudPlayerContext";
@@ -18,12 +21,10 @@ import WavNowPlayingBar from "./components/WavNowPlayingBar";
 import { GlobalAudioManagerProvider } from "./contexts/GlobalAudioManagerContext";
 import ScrollToTop from "./components/ScrollToTop";
 
-
 function AppContent({ toggleMode, mode }) {
   const theme = useTheme();
   const location = useLocation();
 
-  // Otherwise, render the rest of the app shell
   return (
     <Box
       sx={{
@@ -50,8 +51,11 @@ function AppContent({ toggleMode, mode }) {
           <Route path="/" element={<Home />} />
           <Route path="/solo-projects" element={<SoloProjects />} />
           <Route path="/collaborations" element={<Collaborations />} />
+          <Route path="/collaborations/:slug" element={<CollaborationPage />} />
           <Route path="/studies" element={<Studies />} />
+          <Route path="/studies/:slug" element={<StudyPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects/:slug" element={<ProjectPage />} />
         </Routes>
       </Container>
       <Footer />

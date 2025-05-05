@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Card, CardContent, CardHeader, Grid, Divider, useTheme, CircularProgress } from "@mui/material";
 import AudioPlayer from "../components/AudioPlayer";
+import { Link } from "react-router-dom";  // NEW
+
+function slugify(text) {
+	return text
+		.toString()
+		.toLowerCase()
+		.trim()
+		.replace(/[\s\W-]+/g, "-");
+}
 
 function Studies() {
 	const theme = useTheme();
@@ -72,6 +81,7 @@ function Studies() {
 			<Grid container spacing={4}>
 				{studies.map((item, idx) => {
 					const type = item.type || "study";
+					const linkSlug = item.slug ? item.slug : slugify(item.title);
 
 					return (
 						<Grid item xs={12} key={idx}>
@@ -91,105 +101,27 @@ function Studies() {
 											color: "text.secondary",
 										},
 									}}
-									title={item.title.length > 30 ? `${item.title.slice(0, 30)}...` : item.title}
+									title={
+										<Link
+											to={`/studies/${linkSlug}`}
+											style={{ textDecoration: "none", color: "inherit" }}
+										>
+											{item.title.length > 30 ? `${item.title.slice(0, 30)}...` : item.title}
+										</Link>
+									}
 									subheader={item.description}
 								/>
 
 								<CardContent>
-									{type === "study" && (
-										<>
-											<Typography
-												variant="subtitle2"
-												sx={{
-													mb: 1,
-													color: "text.secondary",
-													fontSize: { xs: "0.95rem", sm: "1rem" },
-												}}
-											>
-												Problem
-											</Typography>
-											<Typography
-												sx={{
-													mb: 2,
-													fontSize: { xs: "1rem", sm: "1.125rem" },
-													lineHeight: 1.5,
-												}}
-											>
-												{item.problem}
-											</Typography>
-
-											<Grid container spacing={3}>
-												<Grid item xs={12} md={6}>
-													<AudioPlayer
-														src={item.beforeUrl}
-														label="Before"
-														bgcolor={theme.palette.mode === "dark" ? "rgba(139, 0, 0, 0.2)" : "rgba(255, 0, 0, 0.1)"}
-													/>
-												</Grid>
-
-												<Grid item xs={12} md={6}>
-													<AudioPlayer
-														src={item.afterUrl}
-														label="After"
-														bgcolor={theme.palette.mode === "dark" ? "rgba(0, 100, 0, 0.2)" : "rgba(0, 128, 0, 0.1)"}
-													/>
-												</Grid>
-											</Grid>
-
-											<Divider sx={{ my: { xs: 2, sm: 3 } }} />
-
-											<Typography
-												variant="subtitle2"
-												sx={{
-													mb: 1,
-													color: "text.secondary",
-													fontSize: { xs: "0.95rem", sm: "1rem" },
-												}}
-											>
-												Conclusion
-											</Typography>
-											<Typography
-												sx={{
-													fontSize: { xs: "1rem", sm: "1.125rem" },
-													lineHeight: 1.5,
-												}}
-											>
-												{item.conclusion}
-											</Typography>
-										</>
-									)}
-
-									{type === "experiment" && (
-										<>
-											{item.url && (
-												<AudioPlayer
-													src={item.url}
-													label="Audio"
-													bgcolor={theme.palette.mode === "dark" ? "rgba(139, 0, 0, 0.2)" : "rgba(255, 0, 0, 0.1)"}
-												/>
-											)}
-											<Divider sx={{ my: { xs: 2, sm: 3 } }} />
-
-											<Typography
-												variant="subtitle2"
-												sx={{
-													mb: 1,
-													color: "text.secondary",
-													fontSize: { xs: "0.95rem", sm: "1rem" },
-												}}
-											>
-												Conclusion
-											</Typography>
-											<Typography
-												sx={{
-													fontSize: { xs: "1rem", sm: "1.125rem" },
-													lineHeight: 1.5,
-												}}
-											>
-												{item.conclusion}
-											</Typography>
-										</>
-									)}
+									{/* Preview only — don't show audio or full content in the list */}
+									<Typography
+										sx={{
+											fontSize: { xs: "1rem", sm: "1.125rem" },
+											lineHeight: 1.5,
+										}}
+									>
+										{type === "study" ? item.problem?.slice(0, 120) + "..." : item.conclusion?.slice(0, 120) + "..."}
+									</Typography>
 								</CardContent>
 							</Card>
 						</Grid>
