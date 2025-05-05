@@ -1,11 +1,6 @@
 {
   "collaborations": [
     {
-      "title": "Euphoria (solo version) Feat. Tom Fahey",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Feuphoria-solo-version-feat-tom",
-      "description": "An intimate guitar duet revisiting 'Euphoria' with guest soloist Tom Fahey, recorded in one take."
-    },
-    {
       "title": "Cage (Kris Janowski & Ashe O'Hara) (2025)",
       "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746475715/Cage_kris_ashe_mp3_m7qt0n.mp3",
       "description": "Upcoming Progressive Rock Track written in collaboration with Ashe O'Hara",
@@ -49,6 +44,11 @@
       "description": "A progressive alternative anthem with heartfelt lyrics and rich instrumental layers.",
       "image": "/uploads/bird-of-paradise-ep-master-artwork.jpg",
       "details": "##### Overview\n\n*Bird Of Paradise* stands as the artist’s defining work, blending intricate musicality with deep personal meaning.\n\n##### Sound & Mood\n\n* Graceful, layered vocals from Ashe O’Hara and Ania Diamond\n* Progressive guitar and bass arrangements\n* Rich, evolving textures\n\n##### Themes\n\nWritten in memoriam, the song addresses themes of love, loss, resilience, and the transcendent power of music as a vessel for grief and healing."
+    },
+    {
+      "title": "Euphoria (solo version) Feat. Tom Fahey",
+      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Feuphoria-solo-version-feat-tom",
+      "description": "An intimate guitar duet revisiting 'Euphoria' with guest soloist Tom Fahey, recorded in one take."
     }
   ]
 }
