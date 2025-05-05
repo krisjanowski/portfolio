@@ -33,6 +33,7 @@ collections:
               - label: Image (Required for .wav links)
                 name: image
                 widget: image
+                required: false
               - label: Details
                 name: details
                 widget: markdown
