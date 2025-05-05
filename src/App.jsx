@@ -18,7 +18,6 @@ import WavNowPlayingBar from "./components/WavNowPlayingBar";
 import { GlobalAudioManagerProvider } from "./contexts/GlobalAudioManagerContext";
 import ScrollToTop from "./components/ScrollToTop";
 
-// Directly import AdminPage for routing without lazy loading
 
 function AppContent({ toggleMode, mode }) {
   const theme = useTheme();

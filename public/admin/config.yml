@@ -1,0 +1,120 @@
+backend:
+  name: git-gateway
+  repo: krisjanowski/portfolio
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: soloProjects
+    label: Solo Projects
+    files:
+      - file: public/uploads/soloProjects.json
+        label: Solo Projects JSON
+        name: soloProjects
+        fields:
+          - label: Projects
+            name: projects
+            widget: list
+            fields:
+              - label: Category
+                name: category
+                widget: string
+              - label: Title
+                name: title
+                widget: string
+              - label: Embed URL
+                name: embedUrl
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+
+  - name: studies
+    label: Studies & Experiments
+    files:
+      - file: public/uploads/studies.json
+        label: Studies JSON
+        name: studies
+        fields:
+          - label: Studies
+            name: studies
+            widget: list
+            fields:
+              - label: Type
+                name: type
+                widget: select
+                options:
+                  - study
+                  - experiment
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Problem
+                name: problem
+                widget: text
+                required: false
+              - label: Before URL
+                name: beforeUrl
+                widget: string
+                required: false
+              - label: After URL
+                name: afterUrl
+                widget: string
+                required: false
+              - label: URL
+                name: url
+                widget: string
+                required: false
+              - label: Conclusion
+                name: conclusion
+                widget: text
+
+  - name: testimonials
+    label: Testimonials
+    files:
+      - file: public/uploads/testimonials.json
+        label: Testimonials JSON
+        name: testimonials
+        fields:
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Role
+                name: role
+                widget: string
+              - label: Testimonial
+                name: testimonial
+                widget: text
+              - label: Avatar
+                name: avatar
+                widget: image
+
+  - name: collaborations
+    label: Collaborations
+    files:
+      - file: public/uploads/collaborations.json
+        label: Collaborations JSON
+        name: collaborations
+        fields:
+          - label: Collaborations
+            name: collaborations
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Embed URL
+                name: embedUrl
+                widget: string
+              - label: Description
+                name: description
+                widget: text
