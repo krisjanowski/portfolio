@@ -127,7 +127,7 @@ function SoloProjects() {
                                                 <AudioPlayer
                                                     src={embedUrl}
                                                     label={title}
-                                                    artwork={embedUrl.endsWith(".wav") ? image : undefined}
+                                                    artwork={image}
                                                 />
                                             )}
 
