@@ -204,7 +204,7 @@ function Home() {
 					Contact Kris
 				</Button>
 				<Box sx={{ mt: 8 }}>
-					<LatestPosts count={3} />
+					<LatestPosts count={3} layout={"grid"}/>
 				</Box>
 			</Box>
 		</Box>

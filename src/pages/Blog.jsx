@@ -77,7 +77,7 @@ function Blog() {
 							<Card variant="outlined" sx={{ height: "100%", display: "flex", flexDirection: "column", bgcolor: "background.paper" }}>
 								<CardHeader
 									title={
-										<Typography variant="h6" fontWeight="bold" noWrap>
+										<Typography variant="h6" fontWeight="bold">
 											<Link to={`/blog/${linkSlug}`} style={{ color: "inherit", textDecoration: "underline" }}>
 												{title}
 											</Link>
