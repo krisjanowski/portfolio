@@ -80,7 +80,7 @@ function Collaborations() {
 			</Typography>
 
 			<Grid container spacing={4}>
-				{collaborations.map(({ title, embedUrl, description, slug }, idx) => {
+				{collaborations.map(({ title, embedUrl, description, image, slug }, idx) => {
 					const linkSlug = slug ? slug : slugify(title);
 
 					return (
@@ -120,7 +120,7 @@ function Collaborations() {
 									{embedUrl.includes("soundcloud.com") ? (
 										<SoundCloudEmbed embedUrl={embedUrl} title={title} description={description} />
 									) : (
-										<AudioPlayer src={embedUrl} label={title} artwork={embedUrl.endsWith(".wav") ? image : undefined} />
+										<AudioPlayer src={embedUrl} label={title} artwork={image} />
 									)}
 									<Typography
 										variant="body2"
