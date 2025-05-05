@@ -1,8 +1,8 @@
 {
     "studies": [
       {
-        "type": "study",
         "title": "Immersive Binaural Mix Study",
+        "type": "study",
         "description": "Evaluating spatial positioning techniques for headphone-focused releases.",
         "problem": "Stereo mixes often lack realistic front-back depth, leading to listener fatigue.",
         "beforeUrl": "/audio/discovery.wav",
@@ -10,8 +10,8 @@
         "conclusion": "Head-related-transfer-function (HRTF) convolution increased front-back localization scores by 38% in blind tests."
       },
       {
-        "type": "study",
         "title": "Psychoacoustic Masking Control",
+        "type": "study",
         "description": "Reducing frequency masking in dense electronic arrangements.",
         "problem": "Competing mid-range elements masked the vocal formants, reducing clarity by >4 dB.",
         "beforeUrl": "/audio/discovery.wav",
@@ -19,8 +19,8 @@
         "conclusion": "Dynamic EQ side-chaining restored vocal intelligibility, improving PESQ objective quality by 0.42."
       },
       {
-        "type": "experiment",
         "title": "Waveform Distortion Threshold Study",
+        "type": "experiment",
         "description": "Testing listener detection of subtle transient distortion.",
         "url": "https://example.com/experiment-details",
         "conclusion": "Listeners reliably detected >0.5% waveform clipping at 80 dB SPL."

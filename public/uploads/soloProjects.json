@@ -1,149 +1,149 @@
 {
-  "projects": [
-    {
-      "category": "Progressive Metal / Roc",
-      "title": "Leo",
-      "image": "https://res.cloudinary.com/dwbtyb0ea/image/upload/v1746361342/FIRE-_Leo_single_artwork_eswrxa.png",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358647/Leo_Master_chsgcu.wav",
-      "description": "A multi-movement progressive-metal journey that blends lush synth ambience with polyrhythmic guitar layers and cinematic drops!"
-    },
-    {
-      "category": "Progressive Metal / Rock",
-      "title": "Asomatous",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fasomatous-full-release-edition-ep-stream",
-      "description": "A multi-movement progressive-metal journey that blends lush synth ambience with polyrhythmic guitar layers and cinematic drops!"
-    },
-    {
-      "category": "Progressive Metal / Rock",
-      "title": "Majesty Part I: Grace",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fmajesty-part-i-grace",
-      "description": "Opening chapter of the trilogy featuring delicate piano motifs, atmospheric swells, and a gradual build into post-rock drums."
-    },
-    {
-      "category": "Progressive Metal / Rock",
-      "title": "Majesty Part II: Grandeur",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fmajesty-part-ii-grandeur-1",
-      "description": "Downtempo grooves evolve into expansive orchestral climaxes and lead-guitar sweeps."
-    },
-    {
-      "category": "Progressive Metal / Rock",
-      "title": "Majesty Part III: Glory",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fmajesty-part-iii-glory",
-      "description": "The triumphant finale of the Majesty trilogy."
-    },
-    {
-      "category": "Progressive Metal / Rock",
-      "title": "Absolution - Doublethink (Kris Edit)",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fabsolution-doublethink-kris-1",
-      "description": "Kris's extended edit adding atmospheric intros and off-kilter breakdowns."
-    },
-    {
-      "category": "Progressive Metal / Rock",
-      "title": "Armageddon Part 4 Outro",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Farmageddon-part-4-outro",
-      "description": "Massive down-tuned riffs fade into eerie post-apocalyptic ambience."
-    },
-    {
-      "category": "Progressive Metal / Rock",
-      "title": "Blood Of Heroes",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fblood-of-heroes-1",
-      "description": "Epic cinematic metal with choir pads, thunderous percussion, and a heroic lead-guitar refrain."
-    },
-    {
-      "category": "Progressive Metal / Rock",
-      "title": "Revenge Is a Dish Best Served Sweet",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Frevenge-is-a-dish-best-served",
-      "description": "Groovy staccato riffs and orchestral stabs in a tongue-in-cheek progressive-metal outing."
-    },
-    {
-      "category": "Ambient / Cinematic / Post-Rock",
-      "title": "Genesis",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fgenesis-1",
-      "description": "A reflective piano-and-strings opening evolves into expansive ambient drones."
-    },
-    {
-      "category": "Ambient / Cinematic / Post-Rock",
-      "title": "Distances Draw Nearer",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fdistances-draw-nearer",
-      "description": "Dreamy shoegaze textures dissolve into post-metal walls of sound."
-    },
-    {
-      "category": "Ambient / Cinematic / Post-Rock",
-      "title": "Never Coming Home",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fnever-coming-home",
-      "description": "A melancholic ballad with plaintive piano and post-rock crescendo."
-    },
-    {
-      "category": "Ambient / Cinematic / Post-Rock",
-      "title": "Holographics",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fholographics",
-      "description": "Glitchy IDM percussion meets soaring post-rock melodies."
-    },
-    {
-      "category": "Pop / Electronic / Alternative",
-      "title": "Bird of Paradise [Mastered Release Edition]",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fbird-of-paradise-featuring-ashe-ohara-ania-diamond-mastered-release-edition",
-      "description": "An atmospheric vocal collaboration with downtempo electronic beats."
-    },
-    {
-      "category": "Pop / Electronic / Alternative",
-      "title": "Brainwash",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fbrainwash",
-      "description": "Industrial grooves and distorted spoken-word samples exploring media indoctrination."
-    },
-    {
-      "category": "Experimental / Demos / Tone Tests",
-      "title": "Falling From Grace (Unfinished Demo)",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Ffalling-from-grace-unfinished-demo",
-      "description": "A raw work-in-progress with haunting vocal sketches and synth pads."
-    },
-    {
-      "category": "Experimental / Demos / Tone Tests",
-      "title": "Euphoria AXE FX Edition",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Feuphoria-2016",
-      "description": "Re-amped remake with AXE-FX tones and ambient textures."
-    },
-    {
-      "category": "Experimental / Demos / Tone Tests",
-      "title": "Euphoria",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Feuphoria",
-      "description": "The original melodic progressive rock version."
-    },
-    {
-      "category": "Experimental / Demos / Tone Tests",
-      "title": "Heaven's Gone 2.0 (no vocals)",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fheavens-gone-2-no-vocals",
-      "description": "Instrumental mix with lush string layers and intricate rhythmic guitars."
-    },
-    {
-      "category": "Experimental / Demos / Tone Tests",
-      "title": "Retrospect Tone",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fretrospect-tone",
-      "description": "Tone-test track with crystalline clean guitars and granular textures."
-    },
-    {
-      "category": "Experimental / Demos / Tone Tests",
-      "title": "Fluffy Kittens (pre-Mix)",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Ffluffy-kittens-pre-mix",
-      "description": "A playful progressive-metal sketch."
-    },
-    {
-      "category": "Experimental / Demos / Tone Tests",
-      "title": "Antics (Mayones Regius 8 demo clip)",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fantics-mayones-regius-8-demo",
-      "description": "8-string demo riffing on djent grooves."
-    },
-    {
-      "category": "Experimental / Demos / Tone Tests",
-      "title": "Antics (AXE FX II Clip)",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fantics-axe-fx-ii-clip",
-      "description": "Alternate take of 'Antics' re-amped through the AXE-FX II."
-    },
-    {
-      "category": "Experimental / Demos / Tone Tests",
-      "title": "Axe Fx II & Mayones Regius 7+8 Test",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Faxe-fx-ii-mayones-regius-7-8",
-      "description": "Tone test comparing 7-string and 8-string Mayones Regius."
-    }
-  ]
+	"projects": [
+		{
+			"title": "Leo",
+			"category": "Progressive Metal / Roc",
+			"image": "https://res.cloudinary.com/dwbtyb0ea/image/upload/v1746361342/FIRE-_Leo_single_artwork_eswrxa.png",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358647/Leo_Master_chsgcu.wav",
+			"description": "A multi-movement progressive-metal journey that blends lush synth ambience with polyrhythmic guitar layers and cinematic drops!"
+		},
+		{
+			"title": "Asomatous",
+			"category": "Progressive Metal / Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fasomatous-full-release-edition-ep-stream",
+			"description": "A multi-movement progressive-metal journey that blends lush synth ambience with polyrhythmic guitar layers and cinematic drops!"
+		},
+		{
+			"title": "Majesty Part I: Grace",
+			"category": "Progressive Metal / Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fmajesty-part-i-grace",
+			"description": "Opening chapter of the trilogy featuring delicate piano motifs, atmospheric swells, and a gradual build into post-rock drums."
+		},
+		{
+			"title": "Majesty Part II: Grandeur",
+			"category": "Progressive Metal / Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fmajesty-part-ii-grandeur-1",
+			"description": "Downtempo grooves evolve into expansive orchestral climaxes and lead-guitar sweeps."
+		},
+		{
+			"title": "Majesty Part III: Glory",
+			"category": "Progressive Metal / Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fmajesty-part-iii-glory",
+			"description": "The triumphant finale of the Majesty trilogy."
+		},
+		{
+			"title": "Absolution - Doublethink (Kris Edit)",
+			"category": "Progressive Metal / Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fabsolution-doublethink-kris-1",
+			"description": "Kris's extended edit adding atmospheric intros and off-kilter breakdowns."
+		},
+		{
+			"title": "Armageddon Part 4 Outro",
+			"category": "Progressive Metal / Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Farmageddon-part-4-outro",
+			"description": "Massive down-tuned riffs fade into eerie post-apocalyptic ambience."
+		},
+		{
+			"title": "Blood Of Heroes",
+			"category": "Progressive Metal / Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fblood-of-heroes-1",
+			"description": "Epic cinematic metal with choir pads, thunderous percussion, and a heroic lead-guitar refrain."
+		},
+		{
+			"title": "Revenge Is a Dish Best Served Sweet",
+			"category": "Progressive Metal / Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Frevenge-is-a-dish-best-served",
+			"description": "Groovy staccato riffs and orchestral stabs in a tongue-in-cheek progressive-metal outing."
+		},
+		{
+			"title": "Genesis",
+			"category": "Ambient / Cinematic / Post-Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fgenesis-1",
+			"description": "A reflective piano-and-strings opening evolves into expansive ambient drones."
+		},
+		{
+			"title": "Distances Draw Nearer",
+			"category": "Ambient / Cinematic / Post-Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fdistances-draw-nearer",
+			"description": "Dreamy shoegaze textures dissolve into post-metal walls of sound."
+		},
+		{
+			"title": "Never Coming Home",
+			"category": "Ambient / Cinematic / Post-Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fnever-coming-home",
+			"description": "A melancholic ballad with plaintive piano and post-rock crescendo."
+		},
+		{
+			"title": "Holographics",
+			"category": "Ambient / Cinematic / Post-Rock",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fholographics",
+			"description": "Glitchy IDM percussion meets soaring post-rock melodies."
+		},
+		{
+			"title": "Bird of Paradise [Mastered Release Edition]",
+			"category": "Pop / Electronic / Alternative",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fbird-of-paradise-featuring-ashe-ohara-ania-diamond-mastered-release-edition",
+			"description": "An atmospheric vocal collaboration with downtempo electronic beats."
+		},
+		{
+			"title": "Brainwash",
+			"category": "Pop / Electronic / Alternative",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fbrainwash",
+			"description": "Industrial grooves and distorted spoken-word samples exploring media indoctrination."
+		},
+		{
+			"title": "Falling From Grace (Unfinished Demo)",
+			"category": "Experimental / Demos / Tone Tests",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Ffalling-from-grace-unfinished-demo",
+			"description": "A raw work-in-progress with haunting vocal sketches and synth pads."
+		},
+		{
+			"title": "Euphoria AXE FX Edition",
+			"category": "Experimental / Demos / Tone Tests",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Feuphoria-2016",
+			"description": "Re-amped remake with AXE-FX tones and ambient textures."
+		},
+		{
+			"title": "Euphoria",
+			"category": "Experimental / Demos / Tone Tests",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Feuphoria",
+			"description": "The original melodic progressive rock version."
+		},
+		{
+			"title": "Heaven's Gone 2.0 (no vocals)",
+			"category": "Experimental / Demos / Tone Tests",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fheavens-gone-2-no-vocals",
+			"description": "Instrumental mix with lush string layers and intricate rhythmic guitars."
+		},
+		{
+			"title": "Retrospect Tone",
+			"category": "Experimental / Demos / Tone Tests",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fretrospect-tone",
+			"description": "Tone-test track with crystalline clean guitars and granular textures."
+		},
+		{
+			"title": "Fluffy Kittens (pre-Mix)",
+			"category": "Experimental / Demos / Tone Tests",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Ffluffy-kittens-pre-mix",
+			"description": "A playful progressive-metal sketch."
+		},
+		{
+			"title": "Antics (Mayones Regius 8 demo clip)",
+			"category": "Experimental / Demos / Tone Tests",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fantics-mayones-regius-8-demo",
+			"description": "8-string demo riffing on djent grooves."
+		},
+		{
+			"title": "Antics (AXE FX II Clip)",
+			"category": "Experimental / Demos / Tone Tests",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fantics-axe-fx-ii-clip",
+			"description": "Alternate take of 'Antics' re-amped through the AXE-FX II."
+		},
+		{
+			"title": "Axe Fx II & Mayones Regius 7+8 Test",
+			"category": "Experimental / Demos / Tone Tests",
+			"embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Faxe-fx-ii-mayones-regius-7-8",
+			"description": "Tone test comparing 7-string and 8-string Mayones Regius."
+		}
+	]
 }
