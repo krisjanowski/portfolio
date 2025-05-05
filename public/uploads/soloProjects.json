@@ -1,9 +1,9 @@
 {
   "projects": [
-     {
-      "category": "Progressive Metal / Rock",
+    {
+      "category": "Progressive Metal / Roc",
       "title": "Leo",
-       "image":"https://res.cloudinary.com/dwbtyb0ea/image/upload/v1746361342/FIRE-_Leo_single_artwork_eswrxa.png",
+      "image": "https://res.cloudinary.com/dwbtyb0ea/image/upload/v1746361342/FIRE-_Leo_single_artwork_eswrxa.png",
       "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358647/Leo_Master_chsgcu.wav",
       "description": "A multi-movement progressive-metal journey that blends lush synth ambience with polyrhythmic guitar layers and cinematic drops!"
     },
