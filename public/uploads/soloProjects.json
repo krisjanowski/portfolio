@@ -102,22 +102,25 @@
       "image": "/uploads/kris-janowski-euphoria-artwork.jpg"
     },
     {
-      "title": "Brainwash",
-      "category": "Pop / Electronic / Alternative",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Fbrainwash",
-      "description": "Industrial grooves and distorted spoken-word samples exploring media indoctrination."
+      "title": "Majesty Part I: Grace (2014)",
+      "category": "Progressive Metal",
+      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358458/Majesty_Part_I__Grace_kz3snl.mp3",
+      "description": "A slow tempo prog metal track unreleased from 2014.",
+      "image": "/uploads/majesty.png"
     },
     {
-      "title": "Falling From Grace (Unfinished Demo)",
-      "category": "Experimental / Demos / Tone Tests",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Ffalling-from-grace-unfinished-demo",
-      "description": "A raw work-in-progress with haunting vocal sketches and synth pads."
+      "title": "Majesty Part II: Grandeur (2015)",
+      "category": "Progressive Metal",
+      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358472/Majesty_part_II__Grandeur_qkyofr.mp3",
+      "description": "A 9 minute long intricate and complex progressive metal track unreleased from 2015.",
+      "image": "/uploads/majesty.png"
     },
     {
-      "title": "Euphoria AXE FX Edition",
-      "category": "Experimental / Demos / Tone Tests",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Feuphoria-2016",
-      "description": "Re-amped remake with AXE-FX tones and ambient textures."
+      "title": "Heaven's Gone (2016)",
+      "category": "Acoustic Rock",
+      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358466/Heaven_s_Gone_2.0_2015_yuuvue.mp3",
+      "description": "Lush acoustic guitar layers with an epic guitar solo. Unreleased from 2016.",
+      "image": "/uploads/heaven-s-gone-artwork.jpg"
     },
     {
       "title": "Euphoria",
