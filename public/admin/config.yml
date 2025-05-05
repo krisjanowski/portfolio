@@ -18,18 +18,21 @@ collections:
             name: projects
             widget: list
             fields:
-              - label: Category
-                name: category
-                widget: string
               - label: Title
                 name: title
                 widget: string
-              - label: Embed URL
+              - label: Category
+                name: category
+                widget: string
+              - label: Embed URL (Soundcloud or .wav link)
                 name: embedUrl
                 widget: string
               - label: Description
                 name: description
                 widget: text
+              - label: Image (Required for .wav links)
+                name: image
+                widget: image
 
   - name: studies
     label: Studies & Experiments
@@ -42,15 +45,15 @@ collections:
             name: studies
             widget: list
             fields:
+              - label: Title
+                name: title
+                widget: string
               - label: Type
                 name: type
                 widget: select
                 options:
                   - study
                   - experiment
-              - label: Title
-                name: title
-                widget: string
               - label: Description
                 name: description
                 widget: text
@@ -112,7 +115,7 @@ collections:
               - label: Title
                 name: title
                 widget: string
-              - label: Embed URL
+              - label: SoundCloud Embed URL
                 name: embedUrl
                 widget: string
               - label: Description
