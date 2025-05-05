@@ -138,3 +138,35 @@ collections:
                 name: details
                 widget: markdown
                 required: false
+  - name: blog
+    label: Blog
+    files:
+      - file: public/uploads/blogPosts.json
+        label: Blog Posts JSON
+        name: blogPosts
+        fields:
+          - label: Posts
+            name: posts
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Slug
+                name: slug
+                widget: string
+              - label: Author
+                name: author
+                widget: string
+              - label: Publish Date
+                name: date
+                widget: datetime
+              - label: Summary
+                name: summary
+                widget: text
+              - label: Cover Image
+                name: coverImage
+                widget: image
+              - label: Content
+                name: content
+                widget: markdown

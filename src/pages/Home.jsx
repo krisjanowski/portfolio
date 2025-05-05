@@ -2,10 +2,30 @@ import React from "react";
 import { Box, Typography, Grid, Button, Card, CardContent, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import Testimonials from "../components/testimonials";
+import LatestPosts from "../components/LatestPosts";
 
 function Home() {
 	const theme = useTheme();
-
+	const cards = [
+		{
+			title: "Solo Projects",
+			description: "Original works blending electronic soundscapes, polyrhythmic layers, and emotive melodies.",
+			buttonText: "View Projects",
+			link: "/solo-projects",
+		},
+		{
+			title: "Collaborations",
+			description: "A collection of tracks created with talented vocalists, instrumentalists, and fellow producers.",
+			buttonText: "Explore Collaborations",
+			link: "/collaborations",
+		},
+		{
+			title: "Academic Studies",
+			description: "Research into psychoacoustics, spatial perception, and advanced mixing techniques.",
+			buttonText: "Read Studies",
+			link: "/studies",
+		},
+	];
 	return (
 		<Box
 			sx={(theme) => ({
@@ -116,72 +136,55 @@ function Home() {
 
 			{/* FEATURED SECTIONS PREVIEW */}
 			<Grid container spacing={4}>
-				<Grid item xs={12} md={4}>
-					<Card
-						variant="outlined"
-						sx={{
-							height: "100%",
-							bgcolor: theme.palette.background.paper,
-							color: theme.palette.text.primary,
-						}}
-					>
-						<CardContent>
-							<Typography variant="h6" fontWeight="bold" gutterBottom>
-								Solo Projects
-							</Typography>
-							<Typography sx={{ mb: 2 }}>
-								Original works blending electronic soundscapes, polyrhythmic layers, and emotive melodies.
-							</Typography>
-							<Button variant="contained" component={Link} to="/solo-projects" size="small">
-								View Projects
-							</Button>
-						</CardContent>
-					</Card>
-				</Grid>
-
-				<Grid item xs={12} md={4}>
-					<Card
-						variant="outlined"
-						sx={{
-							height: "100%",
-							bgcolor: theme.palette.background.paper,
-							color: theme.palette.text.primary,
-						}}
-					>
-						<CardContent>
-							<Typography variant="h6" fontWeight="bold" gutterBottom>
-								Collaborations
-							</Typography>
-							<Typography sx={{ mb: 2 }}>
-								A collection of tracks created with talented vocalists, instrumentalists, and fellow producers.
-							</Typography>
-							<Button variant="contained" component={Link} to="/collaborations" size="small">
-								Explore Collaborations
-							</Button>
-						</CardContent>
-					</Card>
-				</Grid>
-
-				<Grid item xs={12} md={4}>
-					<Card
-						variant="outlined"
-						sx={{
-							height: "100%",
-							bgcolor: theme.palette.background.paper,
-							color: theme.palette.text.primary,
-						}}
-					>
-						<CardContent>
-							<Typography variant="h6" fontWeight="bold" gutterBottom>
-								Academic Studies
-							</Typography>
-							<Typography sx={{ mb: 2 }}>Research into psychoacoustics, spatial perception, and advanced mixing techniques.</Typography>
-							<Button variant="contained" component={Link} to="/studies" size="small">
-								Read Studies
-							</Button>
-						</CardContent>
-					</Card>
-				</Grid>
+				{cards.map((card, index) => (
+					<Grid item xs={12} md={4} key={index}>
+						<Card
+							variant="outlined"
+							sx={(theme) => ({
+								height: "100%",
+								display: "flex",
+								flexDirection: "column",
+								justifyContent: "space-between",
+								bgcolor: theme.palette.background.paper,
+								color: theme.palette.text.primary,
+								transition: "transform 0.3s, box-shadow 0.3s",
+								"&:hover": {
+									transform: "translateY(-4px)",
+									boxShadow: 6,
+								},
+							})}
+						>
+							<CardContent sx={{ flexGrow: 1 }}>
+								<Typography variant="h6" fontWeight="bold" gutterBottom>
+									{card.title}
+								</Typography>
+								<Typography sx={{ mb: 2 }}>{card.description}</Typography>
+							</CardContent>
+							<Box sx={{ p: 2 }}>
+								<Button
+									variant="contained"
+									component={Link}
+									to={card.link}
+									size="large"
+									fullWidth
+									sx={{
+										borderRadius: "24px",
+										fontWeight: "bold",
+										textTransform: "none",
+										py: 1.2,
+										transition: "all 0.3s ease",
+										"&:hover": {
+											transform: "scale(1.03)",
+											boxShadow: 8,
+										},
+									}}
+								>
+									{card.buttonText}
+								</Button>
+							</Box>
+						</Card>
+					</Grid>
+				))}
 			</Grid>
 
 			{/* CALL TO ACTION */}
@@ -196,10 +199,13 @@ function Home() {
 				>
 					Ready to collaborate or need an expert touch for your next project?
 				</Typography>
-                <Testimonials />
+				<Testimonials />
 				<Button variant="outlined" size="large" component={Link} to="/contact">
 					Contact Kris
 				</Button>
+				<Box sx={{ mt: 8 }}>
+					<LatestPosts count={3} />
+				</Box>
 			</Box>
 		</Box>
 	);

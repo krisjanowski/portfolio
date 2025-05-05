@@ -60,3 +60,29 @@
 		transform: scaleY(1);
 	}
 }
+
+.blogPost a {
+    color: #007BFF; /* Bootstrap standard blue */
+    text-decoration: underline;
+  }
+  
+  .blogPost  a:visited {
+    color: #0056b3; /* Darker blue for visited */
+  }
+  
+  .blogPost  a:hover,
+  .blogPost  a:focus {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .blogPost  a:active {
+    color: #004080;
+  }
+
+  .shareButtons {
+    color: deepskyblue;
+  }
+  .shareButtons a {
+    color: deepskyblue;
+  }
