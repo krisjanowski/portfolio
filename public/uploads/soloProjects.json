@@ -1,126 +1,140 @@
 {
-  "projects": [
-    {
-      "title": "Leo (Feat. Dominika Jonczyk) (2024)",
-      "category": "Electronic",
-      "image": "https://res.cloudinary.com/dwbtyb0ea/image/upload/v1746361342/FIRE-_Leo_single_artwork_eswrxa.png",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358647/Leo_Master_chsgcu.wav",
-      "description": "A high energy electronic dance music anthem with catchy vocals blending melodic phrases and fast paced spoken word.",
-      "details": "Leo is definitely a standout track, elevated by the capturing presence of vocalist Dominika Jonczyk. With its lush ambient textures and booming electronic rhythm, the song creates an energetic vibe that feels grand and evokes the desire to dance. Jonczyk’s haunting vocals glide effortlessly over the production, adding emotional depth to a track that rewards repeated listening. An absolutely epic and immersive listening experience."
-    },
-    {
-      "title": "Asomatous Movement I: Awakening (2023)",
-      "category": "Experimental",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358679/01_Movement_I__Awakening_z4awn9.wav",
-      "description": "The first movement of the highly experimental and progressive instrumental concept album \"Asomatous\" featuring epic string sections, ethereal and intense synth textures and jazzy piano accompanied by eclectic and powerful drums.",
-      "image": "/uploads/asomatous-ep-artwork.png"
-    },
-    {
-      "title": "Asomatous Movement II: Pareidolia (2023)",
-      "category": "Experimental",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358605/02_Movement_II__Pareidolia_rjkzqd.wav",
-      "description": "The second movement of the highly experimental and progressive instrumental concept album \"Asomatous\" characterised by highly complex jazz-inspired piano melodies and epic percussion.",
-      "image": "/uploads/asomatous-ep-artwork.png"
-    },
-    {
-      "title": "Asomatous Movement III: Vessel (2023)",
-      "category": "Experimental",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358643/03_Movement_III__Vessel_vvlcoy.wav",
-      "description": "The third movement of the highly experimental and progressive instrumental concept album \"Asomatous\" full of intricate guitar melodies, jazzy piano motifs, and a show stopping guitar solo.",
-      "image": "/uploads/asomatous-ep-artwork.png"
-    },
-    {
-      "title": "Asomatous Movement IV: Enigma (2023)",
-      "category": "Experimental",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358683/04_Movement_IV__Enigma_v4zpdw.wav",
-      "description": "The Fourth movement of the highly experimental and progressive instrumental concept album \"Asomatous\" building from the get go with melodies inspired by Beethoven's Moonlight Sonata and the Stranger Things theme tune spanning across pianos, strings, saxophone and numerous synth textures, brought to life by an energetic combination of electronic and acoustic drums.",
-      "image": "/uploads/asomatous-ep-artwork.png"
-    },
-    {
-      "title": "Podium (2023)",
-      "category": "Electronic",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358712/06_Podium_tz7cgk.wav",
-      "description": "Bonus track from the \"Asomatous\" EP comprised of epic and energetic sections that build throughout, combining ambient soundscapes with eccentric synth melodies and head bopping beats. This one's for the dance floor!",
-      "image": "/uploads/asomatous-ep-artwork.png"
-    },
-    {
-      "title": "Cancer (2025)",
-      "category": "Downtempo",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358703/Cancer_Pre-Master_rdsgrk.wav",
-      "description": "Opening track from upcoming concept album \"Zodiac: Solstice I\" that captures the listener with highly ambient soundscapes, immersive bass, guitar swells and a minimalistic drum pattern. This song is designed to capture the personality traits associated with the zodiac sign Cancer.",
-      "image": "/uploads/water-cancer-single-artwork.png"
-    },
-    {
-      "title": "Virgo (2025)",
-      "category": "Alternative",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358688/Virgo_Vocal_Guide_dbwcev.wav",
-      "description": "The third track from upcoming concept album \"Zodiac: Solstice I\" designed to reflect the traits belonging to zodiac sign Virgo. Immersive piano and string melodies develop into ambient guitar passages and ending on an epic climax.",
-      "image": "/uploads/earth-virgo-single-artwork.png"
-    },
-    {
-      "title": "Requiem: Infinite Plane (2022)",
-      "category": "Orchestral",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358683/Requiem_Infinite_Plane_jbtrj1.wav",
-      "description": "B-Side track to the 2022 Single \"Bird Of Paradise\" designed to create a completely separate and distinct listening experience from \"Bird Of paradise\" by isolating and building on its orchestral components. An incredibly emotive piece of music written in memoriam of my sister who died suddenly in 2021 at age 30.",
-      "details": "Requiem: Infinite Plane is a meditative ambient composition that unfolds with a sense of cosmic stillness and introspective depth. The track layers sustained synth textures and subtle harmonic shifts, creating a vast sonic landscape that evokes the feeling of drifting through an endless expanse. Its minimalist structure and gradual evolution invite listeners into a contemplative state, making it a fitting piece for moments of reflection or deep focus.\n\nThe track's title, “Requiem: Infinite Plane,” encompasses themes of mourning and infinity, which are reflected in its expansive soundscape and melancholic undertones.",
-      "image": "/uploads/bird-of-paradise-ep-master-artwork.jpg"
-    },
-    {
-      "title": "Bird Of Paradise (Instrumental) (2022)",
-      "category": "Alternative",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358697/Bird_of_Paradise_Instrumental_jjx4da.wav",
-      "description": "Instrumental version of the 2022 single \"Bird Of Paradise\" written in memoriam of my sister who tragically passed away at age 30 in 2021. The song is progressive in its nature and is comprised of stunning melodic passages focused largely around the guitar and bass guitar. It is detailed with layers upon layers of rich harmonic content with expansive strings and synths creating a deeply emotive and expressive listening experience.",
-      "image": "/uploads/bird-of-paradise-ep-master-artwork.jpg",
-      "details": "Bird of Paradise (Instrumental) is a luminous ambient alternative-style composition that unfolds over 5 minutes and 14 seconds. Stripped of vocals, this instrumental version allows the intricate production to take centre stage, highlighting the skill behind crafting rich emotive soundscapes. The track features shimmering synth layers and a gentle, evolving rhythm that evokes a sense of serene introspection. Its lush textures and subtle progressions create an atmosphere that is both tranquil and emotionally resonant, making it a truly standout piece of music.\n\nReleased in 2022, as part of the Bird of Paradise single, this instrumental track showcases the ability to convey depth and emotion through purely instrumental means. The composition's ambient qualities and meticulous arrangement invite listeners into a contemplative space, reflecting the artist's signature style of blending electronic elements with ambient sensibilities."
-    },
-    {
-      "title": "Bird Of Paradise (Feat. Ashe O'Hara & Ania Diamond) (2022)",
-      "category": "Alternative",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358688/Bird_of_Paradise_Featuring_Ashe_O_Hara_Ania_Diamond_jmrdvj.wav",
-      "description": "My Debut Single Featuring Ashe O'Hara (Ex. TesseracT) and Ania Diamond, released 2022. The song I consider my masterpiece. This song is a totally immersive journey through grandiose melodic passages with graceful layers of beautiful vocals conveying powerful lyrics that come straight from the heart. Written in memoriam of my sister who tragically passed away suddenly in May 2021. Instrumentally characterised by a multitude of different instruments based around intricate and progressive guitar and bass guitar melodies.",
-      "image": "/uploads/bird-of-paradise-ep-master-artwork.jpg"
-    },
-    {
-      "title": "Scorpio (Feat. Kateryna) (2025)",
-      "category": "Electronic",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358612/Scorpio_Master_m1nury.wav",
-      "description": "Fifth track from upcoming concept album \"Zodiac: Solstice I\" Featuring the hauntingly beautiful vocals of Ukrainian singer Kateryna in both Ukrainian and English. A dark piece of music designed to reflect the characteristics associated with the zodiac sign Scorpio. Punchy beats, ambient and dubstep synth motifs and melodic piano runs.",
-      "image": "/uploads/water-scorpio-single-artwork.png"
-    },
-    {
-      "title": "Libra (Feat. Aryaki) (2024)",
-      "category": "Electronic",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358700/Libra_Master_jucka1.wav",
-      "description": "Fourth track from upcoming concept album \"Zodiac: Solstice I\" featuring the ambient and ethereal vocal style of Aryaki. A mix of electronic styles incorporated into an epic progressive dance music track.",
-      "image": "/uploads/air-libra-single-artwork.png"
-    },
-    {
-      "title": "Euphoria 2.0 (2016)",
-      "category": "Progressive Rock",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358480/Euphoria_2.0_2016_yxqvog.m4a",
-      "description": "Re-amped remake with AXE-FX tones and ambient textures.",
-      "image": "/uploads/kris-janowski-euphoria-artwork.jpg"
-    },
-    {
-      "title": "Majesty Part I: Grace (2014)",
-      "category": "Progressive Metal",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358458/Majesty_Part_I__Grace_kz3snl.mp3",
-      "description": "A slow tempo prog metal track unreleased from 2014.",
-      "image": "/uploads/majesty.png"
-    },
-    {
-      "title": "Majesty Part II: Grandeur (2015)",
-      "category": "Progressive Metal",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358472/Majesty_part_II__Grandeur_qkyofr.mp3",
-      "description": "A 9 minute long intricate and complex progressive metal track unreleased from 2015.",
-      "image": "/uploads/majesty.png"
-    },
-    {
-      "title": "Heaven's Gone (2016)",
-      "category": "Acoustic Rock",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358466/Heaven_s_Gone_2.0_2015_yuuvue.mp3",
-      "description": "Lush acoustic guitar layers with an epic guitar solo. Unreleased from 2016.",
-      "image": "/uploads/heaven-s-gone-artwork.jpg"
-    }
-  ]
+	"projects": [
+		{
+			"title": "Leo (Feat. Dominika Jonczyk) (2024)",
+			"category": "Electronic",
+			"image": "https://res.cloudinary.com/dwbtyb0ea/image/upload/v1746361342/FIRE-_Leo_single_artwork_eswrxa.png",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358647/Leo_Master_chsgcu.wav",
+			"description": "An energetic electronic anthem blending melodic hooks, driving beats, and Dominika Jonczyk’s captivating vocals.",
+			"details": "## Overview\n**Leo** delivers an uplifting blend of soaring melodies, dynamic electronic beats, and captivating vocals by Dominika Jonczyk. The track draws the listener into an energetic, dance-ready soundscape with emotional depth.\n\n## Sound & Mood\n- Ambient synth textures and pulsing bass\n- Rapid spoken-word verses contrasting melodic choruses\n- Layered harmonies and propulsive percussion\n\nJonczyk’s vocal presence creates a perfect balance of power and vulnerability, turning the track into both a personal statement and a communal anthem.\n\n## Themes\n*Leo* celebrates personal strength, resilience, and emotional release — a powerful fusion of movement and meaning."
+		},
+		{
+			"title": "Asomatous Movement I: Awakening (2023)",
+			"category": "Experimental",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358679/01_Movement_I__Awakening_z4awn9.wav",
+			"image": "/uploads/asomatous-ep-artwork.png",
+			"description": "Opening the Asomatous suite with ethereal strings, intricate synth textures, jazzy piano, and eclectic drums.",
+			"details": "## Concept\nThe first movement of the *Asomatous* suite introduces an expansive auditory journey through transformation and consciousness.\n\n## Composition\n- Ethereal strings blend with electronic textures\n- Jazz-inspired piano motifs drive harmonic complexity\n- Eclectic, evolving percussion bridges acoustic and digital elements\n\nThe track symbolizes the listener's awakening — a threshold between the familiar and the surreal.\n\n## Themes\nIt invites reflection on growth, perception, and the transformative power of sound."
+		},
+		{
+			"title": "Asomatous Movement II: Pareidolia (2023)",
+			"category": "Experimental",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358605/02_Movement_II__Pareidolia_rjkzqd.wav",
+			"image": "/uploads/asomatous-ep-artwork.png",
+			"description": "A complex jazz-inspired instrumental with virtuosic piano and epic percussion.",
+			"details": "## Concept\n**Pareidolia** explores the human tendency to find patterns and meaning in abstract forms, both visually and musically.\n\n## Composition\n- Complex jazz piano phrasings\n- Shifting time signatures\n- Percussive elements that morph throughout the piece\n\n## Themes\nListeners are encouraged to perceive shifting shapes and narratives in the music, echoing the cognitive phenomenon from which the track draws its name."
+		},
+		{
+			"title": "Asomatous Movement III: Vessel (2023)",
+			"category": "Experimental",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358643/03_Movement_III__Vessel_vvlcoy.wav",
+			"image": "/uploads/asomatous-ep-artwork.png",
+			"description": "Intricate guitar and jazzy piano motifs culminating in a powerful solo.",
+			"details": "## Concept\n*Vessel* represents the carrier of musical themes and emotions through the broader narrative arc of *Asomatous*.\n\n## Composition\n- Interlocking guitar and piano motifs\n- Expansive jazz harmonies\n- A climactic guitar solo as an emotional apex\n\n## Narrative\nThe movement suggests a journey of conveyance — the passage of creative ideas, emotions, and the human spirit across time and space."
+		},
+		{
+			"title": "Asomatous Movement IV: Enigma (2023)",
+			"category": "Experimental",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358683/04_Movement_IV__Enigma_v4zpdw.wav",
+			"image": "/uploads/asomatous-ep-artwork.png",
+			"description": "A climactic fusion of Moonlight Sonata-inspired melodies and synth-driven progressive rhythms.",
+			"details": "## Concept\nThe final movement, *Enigma*, concludes the suite by embracing the beauty of unanswered questions.\n\n## Composition\n- Piano lines reminiscent of *Moonlight Sonata*\n- Saxophone flourishes and string harmonies\n- Synth textures blending with electronic and acoustic drums\n\n## Themes\nThis movement explores ambiguity, complexity, and the thrill of the unknown — resolving the suite without definitive closure, just as life often does."
+		},
+		{
+			"title": "Podium (2023)",
+			"category": "Electronic",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358712/06_Podium_tz7cgk.wav",
+			"image": "/uploads/asomatous-ep-artwork.png",
+			"description": "A dancefloor-ready bonus track combining ambient textures, synth hooks, and driving beats.",
+			"details": "## Overview\n*Podium* closes the *Asomatous* EP with a celebration of movement and victory.\n\n## Sound & Mood\n- Ambient textures build anticipation\n- Eccentric synth melodies\n- Infectious, head-nodding beats\n\n## Themes\nThe track embodies achievement, transformation, and release — a high-energy finale designed for both thought and dance."
+		},
+		{
+			"title": "Cancer (2025)",
+			"category": "Downtempo",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358703/Cancer_Pre-Master_rdsgrk.wav",
+			"image": "/uploads/water-cancer-single-artwork.png",
+			"description": "Ambient soundscapes and minimalist rhythms reflect the traits of the zodiac sign Cancer.",
+			"details": "## Overview\n**Cancer** introduces the *Zodiac: Solstice I* album with a profound sense of mood and character.\n\n## Sound & Mood\n- Deep ambient soundscapes\n- Lush bass tones\n- Gentle guitar swells\n- Minimalist percussion\n\n## Narrative\nThe track evokes Cancer’s qualities: emotional depth, introspection, and a nurturing spirit. Its fluid, water-like textures mirror the zodiac sign’s elemental core."
+		},
+		{
+			"title": "Virgo (2025)",
+			"category": "Alternative",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358688/Virgo_Vocal_Guide_dbwcev.wav",
+			"image": "/uploads/earth-virgo-single-artwork.png",
+			"description": "Piano, strings, and ambient guitars build towards an epic, Virgo-inspired climax.",
+			"details": "## Overview\n**Virgo** channels the analytical yet poetic essence of the Virgo archetype through evolving musical themes.\n\n## Composition\n- Intricate piano and string interplay\n- Ambient guitar passages\n- A grand, climactic resolution\n\n## Themes\nThis track mirrors Virgo’s desire for order, beauty, and emotional resonance — evolving from quiet introspection to bold declaration."
+		},
+		{
+			"title": "Requiem: Infinite Plane (2022)",
+			"category": "Orchestral",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358683/Requiem_Infinite_Plane_jbtrj1.wav",
+			"image": "/uploads/bird-of-paradise-ep-master-artwork.jpg",
+			"description": "An ambient orchestral meditation written in memoriam of the artist’s sister.",
+			"details": "## Overview\n*Requiem: Infinite Plane* is a meditative, ambient orchestral piece dedicated to the artist’s sister, blending minimalist structure with cosmic themes.\n\n## Sound & Mood\n- Sustained synth layers\n- Gradual harmonic evolution\n- A vast, contemplative sonic landscape\n\n## Themes\nThe track symbolizes infinity, mourning, and transcendence. It offers a serene space for reflection and remembrance."
+		},
+		{
+			"title": "Bird Of Paradise (Instrumental) (2022)",
+			"category": "Alternative",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358697/Bird_of_Paradise_Instrumental_jjx4da.wav",
+			"image": "/uploads/bird-of-paradise-ep-master-artwork.jpg",
+			"description": "A richly layered, emotive instrumental highlighting guitar and ambient textures.",
+			"details": "## Overview\nThis instrumental version of *Bird Of Paradise* offers a pure, unspoken expression of emotion and technical artistry.\n\n## Sound & Mood\n- Layered guitars and bass lines\n- Expansive strings and synths\n- Progressive structure with ambient overtones\n\n## Narrative\nWithout vocals, the music itself tells a story of love, loss, and hope. The composition serves as both a personal catharsis and a universal reflection on grief and memory."
+		},
+		{
+			"title": "Bird Of Paradise (Feat. Ashe O'Hara & Ania Diamond) (2022)",
+			"category": "Alternative",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358688/Bird_of_Paradise_Featuring_Ashe_O_Hara_Ania_Diamond_jmrdvj.wav",
+			"image": "/uploads/bird-of-paradise-ep-master-artwork.jpg",
+			"description": "A progressive alternative anthem with heartfelt lyrics and rich instrumental layers.",
+			"details": "## Overview\n*Bird Of Paradise* stands as the artist’s defining work, blending intricate musicality with deep personal meaning.\n\n## Sound & Mood\n- Graceful, layered vocals from Ashe O’Hara and Ania Diamond\n- Progressive guitar and bass arrangements\n- Rich, evolving textures\n\n## Themes\nWritten in memoriam, the song addresses themes of love, loss, resilience, and the transcendent power of music as a vessel for grief and healing."
+		},
+		{
+			"title": "Scorpio (Feat. Kateryna) (2025)",
+			"category": "Electronic",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358612/Scorpio_Master_m1nury.wav",
+			"image": "/uploads/water-scorpio-single-artwork.png",
+			"description": "Dark electronic track with haunting vocals exploring the essence of Scorpio.",
+			"details": "## Overview\n*Scorpio* reflects the intense and enigmatic nature of the zodiac sign through a fusion of dark electronica and evocative vocal performance by Kateryna.\n\n## Sound & Mood\n- Deep, punchy beats\n- Dubstep-inspired synth motifs\n- Haunting piano runs\n- Kateryna’s vocals in both Ukrainian and English add depth and mystique\n\n## Themes\nThe track channels Scorpio’s characteristics — mystery, power, and emotional complexity. Its brooding textures and shifting dynamics create a journey into the darker facets of the zodiac psyche."
+		},
+		{
+			"title": "Libra (Feat. Aryaki) (2024)",
+			"category": "Electronic",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358700/Libra_Master_jucka1.wav",
+			"image": "/uploads/air-libra-single-artwork.png",
+			"description": "A progressive electronic track blending dance beats and Aryaki’s ethereal vocals.",
+			"details": "## Overview\n*Libra* captures the essence of balance, beauty, and harmony through a blend of progressive electronic elements and atmospheric vocals.\n\n## Sound & Mood\n- Ambient electronic textures layered with progressive dance beats\n- Aryaki’s ethereal vocal style adds airiness and emotion\n- Melodic progressions that flow gracefully\n\n## Themes\nThe track explores Libra’s ideals of symmetry and beauty, translating them into a sonic form that evolves seamlessly, always seeking equilibrium."
+		},
+		{
+			"title": "Euphoria 2.0 (2016)",
+			"category": "Progressive Rock",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358480/Euphoria_2.0_2016_yxqvog.m4a",
+			"image": "/uploads/kris-janowski-euphoria-artwork.jpg",
+			"description": "A re-amped progressive rock piece with AXE-FX tones and ambient textures.",
+			"details": "## Overview\n*Euphoria 2.0* revisits a foundational piece of the artist’s early progressive rock work, now reimagined with modern tones and expanded sonic textures.\n\n## Sound & Mood\n- Re-amped guitar tones using AXE-FX technology\n- Ambient textures add depth and atmosphere\n- Soaring melodic lines and dynamic progressions\n\n## Themes\nThis track captures the spirit of reinvention and refinement — preserving the essence of the original while embracing new possibilities in sound design."
+		},
+		{
+			"title": "Majesty Part I: Grace (2014)",
+			"category": "Progressive Metal",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358458/Majesty_Part_I__Grace_kz3snl.mp3",
+			"image": "/uploads/majesty.png",
+			"description": "An unreleased slow-tempo progressive metal track from 2014.",
+			"details": "## Overview\n*Grace* serves as the opening statement of the unreleased *Majesty* series, blending heavy progressive metal influences with moments of delicate beauty.\n\n## Sound & Mood\n- Slow tempo grooves\n- Melodic lead guitars\n- Atmospheric layering\n\n## Themes\nThe track explores contrasts: strength and vulnerability, power and restraint. It lays the emotional and musical groundwork for the *Majesty* saga."
+		},
+		{
+			"title": "Majesty Part II: Grandeur (2015)",
+			"category": "Progressive Metal",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358472/Majesty_part_II__Grandeur_qkyofr.mp3",
+			"image": "/uploads/majesty.png",
+			"description": "A complex, 9-minute progressive metal composition from 2015.",
+			"details": "## Overview\n*Grandeur* continues the *Majesty* narrative with ambitious compositional structures and intricate instrumental work.\n\n## Sound & Mood\n- Complex, shifting time signatures\n- Expansive lead guitar solos\n- Dynamic interplay between heaviness and melodic passages\n\n## Themes\nThe track represents expansion and ascension — pushing the musical and conceptual boundaries established in *Grace*. It’s a bold, exploratory piece showcasing the artist’s progressive metal artistry."
+		},
+		{
+			"title": "Heaven's Gone (2016)",
+			"category": "Acoustic Rock",
+			"embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358466/Heaven_s_Gone_2.0_2015_yuuvue.mp3",
+			"image": "/uploads/heaven-s-gone-artwork.jpg",
+			"description": "An unreleased acoustic rock ballad featuring layered guitars and a soaring solo.",
+			"details": "## Overview\n*Heaven’s Gone* is a deeply personal acoustic rock ballad that blends introspective songwriting with soaring guitar work.\n\n## Sound & Mood\n- Rich, layered acoustic guitars\n- Expressive electric guitar solo\n- Warm, organic production\n\n## Themes\nThe track explores themes of loss, longing, and resilience. It stands as a heartfelt reflection on the transient nature of life and the enduring power of memory."
+		}
+	]
 }

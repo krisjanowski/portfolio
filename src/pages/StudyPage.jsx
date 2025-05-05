@@ -173,9 +173,6 @@ function StudyPage() {
 						boxShadow: 1
 					}}
 				>
-					<Typography variant="h5" sx={{ mb: 2 }}>
-						Additional Details
-					</Typography>
 					<ReactMarkdown
 						components={{
 							h1: ({ node, ...props }) => <Typography variant="h4" gutterBottom {...props} />,
