@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-	Box,
-	Typography,
-	CircularProgress,
-	IconButton,
-	Stack,
-	Tooltip,
-	Grid,
-	Divider
-} from "@mui/material";
+import { Box, Typography, CircularProgress, IconButton, Stack, Tooltip, Grid, Divider } from "@mui/material";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import SEO from "../components/SEO";
@@ -24,9 +15,7 @@ function BlogPost() {
 		fetch("/uploads/blogPosts.json")
 			.then((res) => res.json())
 			.then((data) => {
-				const match = (data.posts || []).find(
-					(p) => (p.slug || slugify(p.title)) === slug
-				);
+				const match = (data.posts || []).find((p) => (p.slug || slugify(p.title)) === slug);
 				setPost(match);
 				setLoading(false);
 			})
@@ -37,7 +26,11 @@ function BlogPost() {
 	}, [slug]);
 
 	const slugify = (text) =>
-		text.toString().toLowerCase().trim().replace(/[\s\W-]+/g, "-");
+		text
+			.toString()
+			.toLowerCase()
+			.trim()
+			.replace(/[\s\W-]+/g, "-");
 
 	if (loading) {
 		return (
@@ -62,35 +55,23 @@ function BlogPost() {
 	return (
 		<Box sx={{ mt: 1, px: { xs: 2, md: 2 } }}>
 			<Grid container spacing={2}>
-                
-				{/* Sidebar for Latest Posts */}
-				<Grid item xs={12} md={3}>
-					<Box
-						sx={{
-							bgcolor: (theme) =>
-								theme.palette.mode === "dark"
-									? "grey.900"
-									: "grey.100",
-							px: 3,
-							py: 4,
-							borderRadius: 2
-						}}
-					>
-						<Divider sx={{ mb: 2 }} />
-						<LatestPosts count={10} layout={"list"}/>
-					</Box>
-				</Grid>
-				<Grid item xs={12} md={9}>
+				<Grid
+					item
+					xs={12}
+					md={9}
+					sx={{
+						mx: "auto", // horizontal centering
+						display: "flex",
+						justifyContent: "center",
+					}}
+				>
 					<Box
 						sx={(theme) => ({
-							bgcolor:
-								theme.palette.mode === "dark"
-									? "grey.900"
-									: "grey.50",
+							bgcolor: theme.palette.mode === "dark" ? "grey.900" : "grey.50",
 							color: theme.palette.text.primary,
 							px: { xs: 2, md: 4 },
 							py: { xs: 4, md: 6 },
-							borderRadius: 2
+							borderRadius: 2,
 						})}
 						className="blogPost"
 					>
@@ -100,7 +81,7 @@ function BlogPost() {
 							sx={{
 								fontWeight: "bold",
 								mb: 2,
-								fontSize: { xs: "2rem", md: "2.75rem" }
+								fontSize: { xs: "2rem", md: "2.75rem" },
 							}}
 						>
 							{post.title}
@@ -110,23 +91,16 @@ function BlogPost() {
 							{new Date(post.date).toLocaleDateString("en-GB", {
 								day: "numeric",
 								month: "long",
-								year: "numeric"
+								year: "numeric",
 							})}
 						</Typography>
 
 						{/* Share Buttons */}
-						<Stack
-							direction="row"
-							spacing={2}
-							sx={{ mb: 4 }}
-							className="shareButtons"
-						>
+						<Stack direction="row" spacing={2} sx={{ mb: 4 }} className="shareButtons">
 							<Tooltip title="Share on Facebook">
 								<IconButton
 									component="a"
-									href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-										postUrl
-									)}`}
+									href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`}
 									target="_blank"
 									rel="noopener noreferrer"
 								>
@@ -136,9 +110,9 @@ function BlogPost() {
 							<Tooltip title="Share on Twitter">
 								<IconButton
 									component="a"
-									href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-										postUrl
-									)}&text=${encodeURIComponent(post.title)}`}
+									href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(
+										post.title
+									)}`}
 									target="_blank"
 									rel="noopener noreferrer"
 								>
@@ -165,29 +139,30 @@ function BlogPost() {
 						</Stack>
 
 						{post.coverImage && (
-							<Box
-								component="img"
-								src={post.coverImage}
-								alt={post.title}
-								sx={{ width: "100%", borderRadius: 2, mb: 4 }}
-							/>
+							<Box component="img" src={post.coverImage} alt={post.title} sx={{ width: "100%", borderRadius: 2, mb: 4 }} />
 						)}
 
 						<Box sx={{ typography: "body1", lineHeight: 1.8 }}>
 							<ReactMarkdown>{post.content}</ReactMarkdown>
 						</Box>
 
-						<SEO
-							title={post.title}
-							description={
-								post.summary ||
-								post.content.slice(0, 150)
-							}
-							image={post.coverImage}
-							url={postUrl}
-						/>
+						<SEO title={post.title} description={post.summary || post.content.slice(0, 150)} image={post.coverImage} url={postUrl} />
 					</Box>
 				</Grid>
+			</Grid>
+			{/* Sidebar for Latest Posts */}
+			<Grid item xs={12} md={3} pt={4}>
+				<Box
+					sx={{
+						bgcolor: (theme) => (theme.palette.mode === "dark" ? "grey.900" : "grey.100"),
+						px: 3,
+						py: 4,
+						borderRadius: 2,
+					}}
+				>
+					<Divider sx={{ mb: 2 }} />
+					<LatestPosts count={10} layout={"grid"} />
+				</Box>
 			</Grid>
 		</Box>
 	);
