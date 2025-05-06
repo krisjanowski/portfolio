@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Box, Typography, CircularProgress, Button, Divider } from "@mui/material";
 import SoundCloudEmbed from "../components/SoundCloudEmbed.jsx";
-import ReactMarkdown from "react-markdown";  // For markdown support
+import ReactMarkdown from "react-markdown"; // For markdown support
+import AudioPlayer from "../components/AudioPlayer.jsx";
 
 function slugify(text) {
 	return text
@@ -75,7 +76,7 @@ function CollaborationPage() {
 				color: theme.palette.text.primary,
 				px: { xs: 2, md: 6 },
 				py: { xs: 4, md: 8 },
-				textAlign: "center"
+				textAlign: "center",
 			})}
 		>
 			<Typography
@@ -111,18 +112,26 @@ function CollaborationPage() {
 						borderRadius: 2,
 						boxShadow: 2,
 						mx: "auto",
-						display: "block"
+						display: "block",
 					}}
 				/>
 			)}
 
-			{/* SoundCloud player */}
-			<Box sx={{ mb: 4, maxWidth: 700, mx: "auto" }}>
-				<SoundCloudEmbed
-					embedUrl={collab.embedUrl}
-					title={collab.title}
-					description={collab.description}
-				/>
+			{/* Audio or SoundCloud */}
+			<Box sx={{ mb: 4 }}>
+				{collab.embedUrl.includes("soundcloud.com") ? (
+					<Box sx={{ mx: "auto", maxWidth: 700 }}>
+						<SoundCloudEmbed embedUrl={collab.embedUrl} title={collab.title} description={collab.description} />
+					</Box>
+				) : (
+					<Box sx={{ mx: "auto", maxWidth: 600 }}>
+						<AudioPlayer
+							src={collab.embedUrl}
+							label={collab.title}
+							artwork={collab.image || "/defaultArtwork.png"}
+						/>
+					</Box>
+				)}
 			</Box>
 
 			{/* Description */}
@@ -137,10 +146,10 @@ function CollaborationPage() {
 						maxWidth: 800,
 						mx: "auto",
 						textAlign: "left",
-						bgcolor: (theme) => theme.palette.mode === "dark" ? "grey.800" : "grey.100",
+						bgcolor: (theme) => (theme.palette.mode === "dark" ? "grey.800" : "grey.100"),
 						p: 3,
 						borderRadius: 2,
-						boxShadow: 1
+						boxShadow: 1,
 					}}
 				>
 					<ReactMarkdown

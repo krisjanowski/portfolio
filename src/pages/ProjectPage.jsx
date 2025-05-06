@@ -132,7 +132,7 @@ function ProjectPage() {
                         <AudioPlayer
                             src={project.embedUrl}
                             label={project.title}
-                            artwork={project.embedUrl.endsWith(".wav") ? project.image : undefined}
+                            artwork={project.image || "/defaultArtwork.png"}
                         />
                     </Box>
                 )}
