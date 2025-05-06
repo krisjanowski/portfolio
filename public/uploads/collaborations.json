@@ -1,54 +1,59 @@
 {
-  "collaborations": [
-    {
-      "title": "Cage (Kris Janowski & Ashe O'Hara) (2025)",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746475715/Cage_kris_ashe_mp3_m7qt0n.mp3",
-      "description": "Upcoming Progressive Rock Track written in collaboration with Ashe O'Hara",
-      "image": "/uploads/cage-artwork.jpg"
-    },
-    {
-      "title": "The Wall (Aryaki Feat. Kris Janowski) (2025)",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358671/Aryaki_The_Wall_Pre-Master_ovyvpg.wav",
-      "description": "Upcoming Nu Metal track written in collaboration with Aryaki",
-      "image": "/uploads/aryaki-kris-the-wall-art.png"
-    },
-    {
-      "description": "An energetic electronic anthem blending melodic hooks, driving beats, and Dominika Jonczyk’s captivating vocals.",
-      "title": "Leo (Feat. Dominika Jonczyk) (2024)",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358647/Leo_Master_chsgcu.wav",
-      "image": "/uploads/fire-leo-single-artwork.png",
-      "details": "##### Overview\n\n**Leo** delivers an uplifting blend of soaring melodies, dynamic electronic beats, and captivating vocals by Dominika Jonczyk. The track draws the listener into an energetic, dance-ready soundscape with emotional depth.\n\n##### Sound & Mood\n\n* Ambient synth textures and pulsing bass\n* Rapid spoken-word verses contrasting melodic choruses\n* Layered harmonies and propulsive percussion\n\nJonczyk’s vocal presence creates a perfect balance of power and vulnerability, turning the track into both a personal statement and a communal anthem.\n\n##### Themes\n\n*Leo* celebrates personal strength, resilience, and emotional release — a powerful fusion of movement and meaning."
-    },
-    {
-      "title": "Libra (Feat. Aryaki) (2024)",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358700/Libra_Master_jucka1.wav",
-      "description": "A progressive electronic track blending dance beats and Aryaki’s ethereal vocals.",
-      "image": "/uploads/air-libra-single-artwork.png",
-      "details": "##### Overview\n\n*Libra* captures the essence of balance, beauty, and harmony through a blend of progressive electronic elements and atmospheric vocals.\n\n##### Sound & Mood\n\n* Ambient electronic textures layered with progressive dance beats\n* Aryaki’s ethereal vocal style adds airiness and emotion\n* Melodic progressions that flow gracefully\n\n##### Themes\n\nThe track explores Libra’s ideals of symmetry and beauty, translating them into a sonic form that evolves seamlessly, always seeking equilibrium."
-    },
-    {
-      "title": "Scorpio (Feat. Kateryna) (2025)",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358612/Scorpio_Master_m1nury.wav",
-      "description": "Dark electronic track with haunting vocals exploring the essence of Scorpio.",
-      "details": "##### Overview\n\n*Scorpio* reflects the intense and enigmatic nature of the zodiac sign through a fusion of dark electronica and evocative vocal performance by Kateryna.\n\n##### Sound & Mood\n\n* Deep, punchy beats\n* Dubstep-inspired synth motifs\n* Haunting piano runs\n* Kateryna’s vocals in both Ukrainian and English add depth and mystique\n\n##### Themes\n\nThe track channels Scorpio’s characteristics — mystery, power, and emotional complexity. Its brooding textures and shifting dynamics create a journey into the darker facets of the zodiac psyche.",
-      "image": "/uploads/water-scorpio-single-artwork.png"
-    },
-    {
-      "title": "Bird Of Paradise (Feat. Ashe O'Hara & Ania Diamond) (2022)",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358688/Bird_of_Paradise_Featuring_Ashe_O_Hara_Ania_Diamond_jmrdvj.wav",
-      "description": "A progressive alternative anthem with heartfelt lyrics and rich instrumental layers.",
-      "image": "/uploads/bird-of-paradise-ep-master-artwork.jpg",
-      "details": "##### Overview\n\n*Bird Of Paradise* stands as the artist’s defining work, blending intricate musicality with deep personal meaning.\n\n##### Sound & Mood\n\n* Graceful, layered vocals from Ashe O’Hara and Ania Diamond\n* Progressive guitar and bass arrangements\n* Rich, evolving textures\n\n##### Themes\n\nWritten in memoriam, the song addresses themes of love, loss, resilience, and the transcendent power of music as a vessel for grief and healing."
-    },
-    {
-      "title": "Euphoria (solo version) Feat. Tom Fahey",
-      "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Feuphoria-solo-version-feat-tom",
-      "description": "An intimate guitar duet revisiting 'Euphoria' with guest soloist Tom Fahey, recorded in one take."
-    },
-    {
-      "title": "Doublethink (2014)",
-      "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358420/Dave_Bryce_Doublethink_2013_zubz9z.mp3",
-      "description": "Short demo collaboration from 2014 with Dave Bryce."
-    }
-  ]
-}
+    "collaborations": [
+      {
+        "title": "Cage",
+        "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746475715/Cage_kris_ashe_mp3_m7qt0n.mp3",
+        "description": "Upcoming Progressive Rock Track written in collaboration with Ashe O'Hara.",
+        "image": "/uploads/cage-artwork.jpg",
+        "details": "##### Overview\n\n*Cage*  (Kris Janowski & Ashe O'Hara) (2025) represents a bold foray into emotionally charged progressive rock, blending Ashe O’Hara’s signature ethereal vocal style with Janowski’s intricate compositional structures.\n\n##### Sound & Mood\n\n* Complex time signatures and polyrhythmic patterns\n* Cinematic build-ups leading to cathartic chorus climaxes\n* Layered guitar work combining atmospheric clean tones and soaring distortion\n* Orchestral string arrangements enhancing the progressive dynamic shifts\n\n##### Themes\n\nThe song explores existential themes of self-imposed limitations and the struggle for psychological and spiritual liberation.\n\n##### Production Notes\n\nProduced using a hybrid of analog outboard gear and modern digital workstations, emphasizing warmth and clarity. Ashe O’Hara’s vocal takes were recorded over multiple sessions to capture vulnerability and power."
+      },
+      {
+        "title": "The Wall",
+        "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358671/Aryaki_The_Wall_Pre-Master_ovyvpg.wav",
+        "description": "Upcoming Nu Metal track written in collaboration with Aryaki.",
+        "image": "/uploads/aryaki-kris-the-wall-art.png",
+        "details": "##### Overview\n\n*The Wall*  (Aryaki Feat. Kris Janowski) (2025) is a hard-hitting Nu Metal anthem merging Aryaki’s aggressive vocal prowess with Janowski’s riff-driven guitar and dynamic songwriting.\n\n##### Sound & Mood\n\n* Downtuned guitars with chugging, syncopated riffs\n* Industrial-inspired synth layers and electronic textures\n* Percussive intensity featuring hybrid acoustic/electronic drum kits\n* Emotionally raw vocal performances, alternating between growls and melodic hooks\n\n##### Themes\n\nThe track addresses social alienation, inner turmoil, and defiance against societal conformity—the metaphorical 'walls' we build around ourselves.\n\n##### Production Notes\n\nCo-produced with Aryaki. Special attention given to integrating electronic elements without sacrificing the organic heaviness typical of Nu Metal. Parallel compression techniques were applied to enhance the track's punch and energy."
+      },
+      {
+        "title": "Leo",
+        "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358647/Leo_Master_chsgcu.wav",
+        "image": "/uploads/fire-leo-single-artwork.png",
+        "description": "An energetic electronic anthem blending melodic hooks, driving beats, and Dominika Jonczyk’s captivating vocals.",
+        "details": "##### Overview\n\n**Leo** (Feat. Dominika Jonczyk) (2024) delivers an uplifting blend of soaring melodies, dynamic electronic beats, and captivating vocals by Dominika Jonczyk. The track draws the listener into an energetic, dance-ready soundscape with emotional depth.\n\n##### Sound & Mood\n\n* Ambient synth textures and pulsing bass\n* Rapid spoken-word verses contrasting melodic choruses\n* Layered harmonies and propulsive percussion\n\nJonczyk’s vocal presence creates a perfect balance of power and vulnerability, turning the track into both a personal statement and a communal anthem.\n\n##### Themes\n\n*Leo* celebrates personal strength, resilience, and emotional release — a powerful fusion of movement and meaning.\n\n##### Production Notes\n\nEngineered with sidechain compression to enhance the rhythmic pulse. Vocals layered with harmonic wideners for an enveloping stereo field."
+      },
+      {
+        "title": "Libra",
+        "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358700/Libra_Master_jucka1.wav",
+        "description": "A progressive electronic track blending dance beats and Aryaki’s ethereal vocals.",
+        "image": "/uploads/air-libra-single-artwork.png",
+        "details": "##### Overview\n\n*Libra*  (Feat. Aryaki) (2024) captures the essence of balance, beauty, and harmony through a blend of progressive electronic elements and atmospheric vocals.\n\n##### Sound & Mood\n\n* Ambient electronic textures layered with progressive dance beats\n* Aryaki’s ethereal vocal style adds airiness and emotion\n* Melodic progressions that flow gracefully\n\n##### Themes\n\nThe track explores Libra’s ideals of symmetry and beauty, translating them into a sonic form that evolves seamlessly, always seeking equilibrium.\n\n##### Production Notes\n\nMixed with mid-side EQ processing to widen the stereo field and preserve vocal clarity. Synth layers were carefully modulated using evolving LFOs to represent the changing scales of balance."
+      },
+      {
+        "title": "Scorpio",
+        "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358612/Scorpio_Master_m1nury.wav",
+        "description": "Dark electronic track with haunting vocals exploring the essence of Scorpio.",
+        "image": "/uploads/water-scorpio-single-artwork.png",
+        "details": "##### Overview\n\n*Scorpio* (Feat. Kateryna) (2025) reflects the intense and enigmatic nature of the zodiac sign through a fusion of dark electronica and evocative vocal performance by Kateryna.\n\n##### Sound & Mood\n\n* Deep, punchy beats\n* Dubstep-inspired synth motifs\n* Haunting piano runs\n* Kateryna’s vocals in both Ukrainian and English add depth and mystique\n\n##### Themes\n\nThe track channels Scorpio’s characteristics — mystery, power, and emotional complexity. Its brooding textures and shifting dynamics create a journey into the darker facets of the zodiac psyche.\n\n##### Production Notes\n\nThe piano segments were recorded in a large ambient room with natural reverb to amplify emotional resonance. Bass elements utilize subharmonic generation to produce a sense of lurking power beneath the mix."
+      },
+      {
+        "title": "Bird Of Paradise",
+        "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358688/Bird_of_Paradise_Featuring_Ashe_O_Hara_Ania_Diamond_jmrdvj.wav",
+        "description": "A progressive alternative anthem with heartfelt lyrics and rich instrumental layers.",
+        "image": "/uploads/bird-of-paradise-ep-master-artwork.jpg",
+        "details": "##### Overview\n\n*Bird Of Paradise*  (Feat. Ashe O'Hara & Ania Diamond) (2022) stands as the artist’s defining work, blending intricate musicality with deep personal meaning.\n\n##### Sound & Mood\n\n* Graceful, layered vocals from Ashe O’Hara and Ania Diamond\n* Progressive guitar and bass arrangements\n* Rich, evolving textures\n\n##### Themes\n\nWritten in memoriam, the song addresses themes of love, loss, resilience, and the transcendent power of music as a vessel for grief and healing.\n\n##### Production Notes\n\nGuitar tones shaped with boutique analog pedals. Ashe and Ania’s vocal harmonies were recorded using Neumann U87 microphones for pristine clarity. A combination of analog tape saturation and digital reverbs were used to provide both warmth and spaciousness."
+      },
+      {
+        "title": "Euphoria (solo version)",
+        "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fkris-janowski%2Feuphoria-solo-version-feat-tom",
+        "description": "An intimate guitar duet revisiting 'Euphoria' with guest soloist Tom Fahey, recorded in one take.",
+        "details": "##### Overview\n\n*Euphoria (Solo Version)* Feat. Tom Fahey strips down the original to a raw, heartfelt acoustic performance, spotlighting the chemistry between Kris Janowski and guest soloist Tom Fahey.\n\n##### Sound & Mood\n\n* Expressive acoustic guitar interplay\n* Spontaneous, live recording energy\n* Warm, natural room reverb\n\n##### Themes\n\nA reflective take on joy, nostalgia, and the bittersweet nature of transcendent moments.\n\n##### Production Notes\n\nRecorded in a single take using two matched condenser microphones positioned for stereo image. No post-production pitch correction or timing edits were applied to preserve authenticity."
+      },
+      {
+        "title": "Doublethink",
+        "embedUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746358420/Dave_Bryce_Doublethink_2013_zubz9z.mp3",
+        "description": "Short demo collaboration from 2014 with Dave Bryce.",
+        "details": "##### Overview\n\n*Doublethink* (2014) is an experimental piece exploring early electronic-rock fusion ideas between Kris Janowski and Dave Bryce.\n\n##### Sound & Mood\n\n* Industrial-tinged synths\n* Syncopated drum machine patterns\n* Gritty, distorted bass lines\n\n##### Themes\n\nInspired by Orwellian concepts of dual realities, surveillance, and intellectual conflict.\n\n##### Production Notes\n\nProduced entirely in-the-box using early versions of Ableton Live and Kontakt libraries. Despite its demo status, it served as an important prototype for later, more polished genre hybrids."
+      }
+    ]
+  }
+  
