@@ -67,14 +67,7 @@ function Collaborations() {
 				Collaborations
 			</Typography>
 
-			<Typography
-				sx={{
-					mb: { xs: 4, sm: 5, md: 6 },
-					maxWidth: 720,
-					fontSize: { xs: "1rem", sm: "1.125rem", md: "1.25rem" },
-					lineHeight: 1.6,
-				}}
-			>
+            <Typography sx={{ mb: 6, maxWidth: 720 }}>
 				Working with other artists is a cornerstone of my creative process. I thrive on blending diverse styles and perspectives — whether
 				collaborating with vocalists, instrumentalists, or fellow producers. These tracks showcase the fusion of unique talents and visions.
 			</Typography>

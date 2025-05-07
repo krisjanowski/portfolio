@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Card, CardContent, CardHeader, Grid, Divider, useTheme, CircularProgress } from "@mui/material";
-import AudioPlayer from "../components/AudioPlayer";
-import { Link } from "react-router-dom";  // NEW
+import { Link } from "react-router-dom";
+import ScienceIcon from "@mui/icons-material/Science"; // For experiments
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 
 function slugify(text) {
 	return text
@@ -9,6 +10,14 @@ function slugify(text) {
 		.toLowerCase()
 		.trim()
 		.replace(/[\s\W-]+/g, "-");
+}
+
+function getTypeIcon(type) {
+	if (type === "experiment") {
+		return <ScienceIcon color="primary" sx={{ fontSize: 32 }} />;
+	} else {
+		return <MenuBookIcon color="secondary" sx={{ fontSize: 32 }} />;
+	}
 }
 
 function Studies() {
@@ -67,26 +76,20 @@ function Studies() {
 				Studies & Experiments
 			</Typography>
 
-			<Typography
-				sx={{
-					mb: { xs: 4, sm: 5, md: 6 },
-					maxWidth: 720,
-					fontSize: { xs: "1rem", sm: "1.125rem", md: "1.25rem" },
-					lineHeight: 1.6,
-				}}
-			>
+			<Typography sx={{ mb: 6, maxWidth: 720 }}>
 				My academic work blends scientific research with creative audio exploration — from psychoacoustics to spatial perception.
 			</Typography>
 
 			<Grid container spacing={4}>
 				{studies.map((item, idx) => {
-					const type = item.type || "study";
+					const type = item.type || "study"; // or experiment
 					const linkSlug = item.slug ? item.slug : slugify(item.title);
 
 					return (
 						<Grid item xs={12} key={idx}>
 							<Card variant="outlined" sx={{ bgcolor: "background.paper" }}>
 								<CardHeader
+									avatar={getTypeIcon(type)}
 									titleTypographyProps={{
 										variant: "h6",
 										sx: {
@@ -102,27 +105,12 @@ function Studies() {
 										},
 									}}
 									title={
-										<Link
-											to={`/studies/${linkSlug}`}
-											style={{ textDecoration: "none", color: "inherit" }}
-										>
+										<Link to={`/studies/${linkSlug}`} style={{ textDecoration: "none", color: "inherit" }}>
 											{item.title}
 										</Link>
 									}
 									subheader={item.description}
 								/>
-
-								<CardContent>
-									{/* Preview only — don't show audio or full content in the list */}
-									<Typography
-										sx={{
-											fontSize: { xs: "1rem", sm: "1.125rem" },
-											lineHeight: 1.5,
-										}}
-									>
-										{type === "study" ? item.problem?.slice(0, 120) + "..." : item.conclusion?.slice(0, 120) + "..."}
-									</Typography>
-								</CardContent>
 							</Card>
 						</Grid>
 					);
