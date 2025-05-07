@@ -70,12 +70,24 @@ collections:
                 name: beforeUrl
                 widget: string
                 required: false
+              - label: Before Label
+                name: beforeLabel
+                widget: string
+                required: false
               - label: After URL - For a Study
                 name: afterUrl
                 widget: string
                 required: false
+              - label: After Label
+                name: afterLabel
+                widget: string
+                required: false
               - label: URL - For Experiment
                 name: url
+                widget: string
+                required: false
+              - label: URL Label
+                name: urlLabel
                 widget: string
                 required: false
               - label: Conclusion

@@ -1,5 +1,18 @@
 {
     "studies": [
+        
+      {
+        "title": "Time Restricted Development, Mixing and Mastering",
+        "type": "experiment",
+        "description": "In this experiment I challenged myself to create a three tracks in 10 minutes, 1 hour, and 1 day, respectively.",
+        "beforeUrl": "/audio/discovery.wav",
+        "beforeLabel": "10 minutes",
+        "afterUrl": "/audio/discovery.wav",
+        "afterLabel": "1 hour",
+        "url": "https://example.com/experiment-details",
+        "urlLabel": "1 day",
+        "conclusion": "This was a fun experiment that helped me understand the importance of time management in music production. I learned that while quick mixes can be fun, they often lack the depth and detail that a more extended mixing process can provide."
+      },
       {
         "title": "Immersive Binaural Mix Study",
         "type": "study",
@@ -17,13 +30,6 @@
         "beforeUrl": "/audio/discovery.wav",
         "afterUrl": "/audio/discovery.wav",
         "conclusion": "Dynamic EQ side-chaining restored vocal intelligibility, improving PESQ objective quality by 0.42."
-      },
-      {
-        "title": "Waveform Distortion Threshold Study",
-        "type": "experiment",
-        "description": "Testing listener detection of subtle transient distortion.",
-        "url": "https://example.com/experiment-details",
-        "conclusion": "Listeners reliably detected >0.5% waveform clipping at 80 dB SPL."
       }
     ]
   }

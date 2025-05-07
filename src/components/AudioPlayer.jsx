@@ -24,7 +24,7 @@ function AudioPlayer({ src, label, artwork, bgcolor }) {
 				px: 1.5,
 				py: 1,
 				display: "flex",
-				alignItems: "center",
+				alignItems: "left",
 				gap: 1.5,
 				width: "100%",
 				maxWidth: 800,
@@ -45,7 +45,7 @@ function AudioPlayer({ src, label, artwork, bgcolor }) {
 					{label}
 				</Typography>
 
-				<Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+				<Box sx={{ display: "flex", alignItems: "left", gap: 1 }}>
 					{!isPlaying ? (
 						<IconButton
 							onClick={handlePlay}

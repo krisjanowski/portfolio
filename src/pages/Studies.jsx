@@ -106,7 +106,7 @@ function Studies() {
 											to={`/studies/${linkSlug}`}
 											style={{ textDecoration: "none", color: "inherit" }}
 										>
-											{item.title.length > 30 ? `${item.title.slice(0, 30)}...` : item.title}
+											{item.title}
 										</Link>
 									}
 									subheader={item.description}

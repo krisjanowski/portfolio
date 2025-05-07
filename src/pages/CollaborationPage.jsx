@@ -76,7 +76,7 @@ function CollaborationPage() {
 				color: theme.palette.text.primary,
 				px: { xs: 2, md: 6 },
 				py: { xs: 4, md: 8 },
-				textAlign: "center",
+				textAlign: "left",
 			})}
 		>
 			<Typography
@@ -87,12 +87,13 @@ function CollaborationPage() {
 					mb: 1,
 					fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
 					lineHeight: 1.2,
+					textAlign: "center",
 				}}
 			>
 				{collab.title}
 			</Typography>
 
-			<Typography variant="subtitle1" color="text.secondary" sx={{ mb: 2 }}>
+			<Typography variant="subtitle1" color="text.secondary" sx={{ mb: 2, textAlign: "center" }}>
 				Collaboration
 			</Typography>
 
@@ -125,17 +126,13 @@ function CollaborationPage() {
 					</Box>
 				) : (
 					<Box sx={{ mx: "auto", maxWidth: 600 }}>
-						<AudioPlayer
-							src={collab.embedUrl}
-							label={collab.title}
-							artwork={collab.image || "/defaultArtwork.png"}
-						/>
+						<AudioPlayer src={collab.embedUrl} label={collab.title} artwork={collab.image || "/defaultArtwork.png"} />
 					</Box>
 				)}
 			</Box>
 
 			{/* Description */}
-			<Typography variant="body1" sx={{ mb: 4, maxWidth: 800, mx: "auto" }}>
+			<Typography variant="body1" sx={{ mb: 4, maxWidth: 800, mx: "auto", textAlign: "center" }}>
 				{collab.description}
 			</Typography>
 
@@ -145,11 +142,11 @@ function CollaborationPage() {
 					sx={{
 						maxWidth: 800,
 						mx: "auto",
+						mx: "auto",
 						textAlign: "left",
-						bgcolor: (theme) => (theme.palette.mode === "dark" ? "grey.800" : "grey.100"),
+						bgcolor: "#2a2b2f",
 						p: 3,
 						borderRadius: 2,
-						boxShadow: 1,
 					}}
 				>
 					<ReactMarkdown
@@ -169,9 +166,11 @@ function CollaborationPage() {
 				</Box>
 			)}
 
-			<Button variant="outlined" component={Link} to="/collaborations" sx={{ mt: 6 }}>
-				← Back to Collaborations
-			</Button>
+			<Box sx={{ textAlign: "center" }}>
+				<Button variant="outlined" component={Link} to="/collaborations" sx={{ mt: 6 }}>
+					← Back to Collaborations
+				</Button>
+			</Box>
 		</Box>
 	);
 }
