@@ -1,36 +1,34 @@
 {
-    "studies": [
-        
-      {
-        "title": "Time Restricted Development, Mixing and Mastering",
-        "type": "experiment",
-        "description": "In this experiment I challenged myself to create a three tracks in 10 minutes, 1 hour, and 1 day, respectively.",
-        "beforeUrl": "/audio/discovery.wav",
-        "beforeLabel": "10 minutes",
-        "afterUrl": "/audio/discovery.wav",
-        "afterLabel": "1 hour",
-        "url": "https://example.com/experiment-details",
-        "urlLabel": "1 day",
-        "conclusion": "This was a fun experiment that helped me understand the importance of time management in music production. I learned that while quick mixes can be fun, they often lack the depth and detail that a more extended mixing process can provide."
-      },
-      {
-        "title": "Immersive Binaural Mix Study",
-        "type": "study",
-        "description": "Evaluating spatial positioning techniques for headphone-focused releases.",
-        "problem": "Stereo mixes often lack realistic front-back depth, leading to listener fatigue.",
-        "beforeUrl": "/audio/discovery.wav",
-        "afterUrl": "/audio/discovery1.wav",
-        "conclusion": "Head-related-transfer-function (HRTF) convolution increased front-back localization scores by 38% in blind tests."
-      },
-      {
-        "title": "Psychoacoustic Masking Control",
-        "type": "study",
-        "description": "Reducing frequency masking in dense electronic arrangements.",
-        "problem": "Competing mid-range elements masked the vocal formants, reducing clarity by >4 dB.",
-        "beforeUrl": "/audio/discovery.wav",
-        "afterUrl": "/audio/discovery.wav",
-        "conclusion": "Dynamic EQ side-chaining restored vocal intelligibility, improving PESQ objective quality by 0.42."
-      }
-    ]
-  }
-  
+  "studies": [
+    {
+      "urlLabel": "1 day",
+      "url": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746794906/Breakaway_MASTER_1.1_mfxieo.wav",
+      "beforeUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746794926/Logic_experiment_1_rgz0gw.mp3",
+      "afterUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1746795126/Logic_experiment_1.1_euqyqy.mp3",
+      "beforeLabel": "10 minutes",
+      "title": "Time Restricted Development, Mixing and Mastering",
+      "afterLabel": "1 hour",
+      "type": "experiment",
+      "description": "In this experiment I challenged myself to produce, mix and master a track in 10 minutes, 1 hour, and 1 day, respectively.",
+      "conclusion": "This was a fun experiment that helped me understand the importance of time management in music production. I learned that while quick mixes can be fun, they often lack the depth and detail that a more extended mixing process can provide."
+    },
+    {
+      "title": "Immersive Binaural Mix Study",
+      "type": "study",
+      "description": "Evaluating spatial positioning techniques for headphone-focused releases.",
+      "problem": "Stereo mixes often lack realistic front-back depth, leading to listener fatigue.",
+      "beforeUrl": "/audio/discovery.wav",
+      "afterUrl": "/audio/discovery1.wav",
+      "conclusion": "Head-related-transfer-function (HRTF) convolution increased front-back localization scores by 38% in blind tests."
+    },
+    {
+      "title": "Psychoacoustic Masking Control",
+      "type": "study",
+      "description": "Reducing frequency masking in dense electronic arrangements.",
+      "problem": "Competing mid-range elements masked the vocal formants, reducing clarity by >4 dB.",
+      "beforeUrl": "/audio/discovery.wav",
+      "afterUrl": "/audio/discovery.wav",
+      "conclusion": "Dynamic EQ side-chaining restored vocal intelligibility, improving PESQ objective quality by 0.42."
+    }
+  ]
+}
