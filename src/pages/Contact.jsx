@@ -5,6 +5,7 @@ import AppleIcon from "@mui/icons-material/Apple";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import RoomIcon from "@mui/icons-material/Room";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import SpecialButton from "../components/SpecialButton";
 
 function Contact() {
 	const [formData, setFormData] = useState({
@@ -90,6 +91,7 @@ function Contact() {
 			</Typography>
 			<Typography variant="body1" gutterBottom>
 				Interested in working together? Want to discuss a project or just say hello? Use the form below or reach out via social media.
+				<SpecialButton link="/GET-A-QUOTE" text="Get a Quote" />
 			</Typography>
 
 			<Divider sx={{ my: 3 }} />

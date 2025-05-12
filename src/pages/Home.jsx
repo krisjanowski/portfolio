@@ -3,6 +3,7 @@ import { Box, Typography, Grid, Button, Card, CardContent, useTheme } from "@mui
 import { Link } from "react-router-dom";
 import Testimonials from "../components/testimonials";
 import LatestPosts from "../components/LatestPosts";
+import SpecialButton from "../components/SpecialButton";
 
 function Home() {
 	const theme = useTheme();
@@ -134,55 +135,108 @@ function Home() {
 				</Typography>
 			</Box>
 
-			{/* FEATURED SECTIONS PREVIEW */}
 			<Grid container spacing={4}>
 				{cards.map((card, index) => (
 					<Grid item xs={12} md={4} key={index}>
-						<Card
-							variant="outlined"
+						<Box
 							sx={(theme) => ({
-								height: "100%",
-								display: "flex",
-								flexDirection: "column",
-								justifyContent: "space-between",
-								bgcolor: theme.palette.background.paper,
-								color: theme.palette.text.primary,
-								transition: "transform 0.3s, box-shadow 0.3s",
+								position: "relative",
+								overflow: "hidden",
+								borderRadius: "20px",
+								background: theme.palette.mode === "dark" ? "rgba(255,255,255,0.02)" : theme.palette.background.paper,
+								border: "1px solid",
+								borderColor: theme.palette.mode === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.06)",
+								backdropFilter: "blur(10px)",
+								transition: "transform 0.4s ease, box-shadow 0.4s ease",
+								boxShadow: theme.palette.mode === "dark" ? "0 10px 30px rgba(0,0,0,0.3)" : "0 8px 20px rgba(0,0,0,0.05)",
 								"&:hover": {
-									transform: "translateY(-4px)",
-									boxShadow: 6,
+									transform: "translateY(-6px)",
+									boxShadow: theme.palette.mode === "dark" ? "0 16px 40px rgba(0,0,0,0.4)" : "0 12px 28px rgba(0,0,0,0.08)",
+								},
+								"&::before": {
+									content: '""',
+									position: "absolute",
+									top: 0,
+									left: "-75%",
+									width: "200%",
+									height: "100%",
+									background:
+										theme.palette.mode === "dark"
+											? "linear-gradient(120deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 20%, rgba(255,255,255,0.1) 60%)"
+											: "linear-gradient(120deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.02) 20%, rgba(0,0,0,0.04) 60%)",
+									transform: "skewX(-25deg)",
+									transition: "0.8s",
+									zIndex: 0,
+								},
+								"&:hover::before": {
+									left: "100%",
 								},
 							})}
 						>
-							<CardContent sx={{ flexGrow: 1 }}>
-								<Typography variant="h6" fontWeight="bold" gutterBottom>
-									{card.title}
-								</Typography>
-								<Typography sx={{ mb: 2 }}>{card.description}</Typography>
-							</CardContent>
-							<Box sx={{ p: 2 }}>
-								<Button
-									variant="contained"
-									component={Link}
-									to={card.link}
-									size="large"
-									fullWidth
-									sx={{
-										borderRadius: "24px",
-										fontWeight: "bold",
-										textTransform: "none",
-										py: 1.2,
-										transition: "all 0.3s ease",
-										"&:hover": {
-											transform: "scale(1.03)",
-											boxShadow: 8,
-										},
-									}}
-								>
-									{card.buttonText}
-								</Button>
+							<Box
+								sx={{
+									position: "relative",
+									zIndex: 1,
+									display: "flex",
+									flexDirection: "column",
+									justifyContent: "space-between",
+									height: "100%",
+									p: 3,
+								}}
+							>
+								<CardContent sx={{ flexGrow: 1 }}>
+									<Typography
+										variant="h6"
+										fontWeight="bold"
+										sx={{
+											fontSize: "1.25rem",
+											letterSpacing: "0.5px",
+											color: (theme) => theme.palette.primary.main,
+											mb: 1,
+										}}
+									>
+										{card.title}
+									</Typography>
+									<Typography
+										variant="body2"
+										sx={(theme) => ({
+											color: theme.palette.text.secondary,
+											fontSize: "0.95rem",
+											lineHeight: 1.6,
+										})}
+									>
+										{card.description}
+									</Typography>
+								</CardContent>
+								<Box sx={{ mt: 3 }}>
+									<Button
+										variant="outlined"
+										component={Link}
+										to={card.link}
+										size="large"
+										fullWidth
+										sx={(theme) => ({
+											borderRadius: "28px",
+											fontWeight: 600,
+											textTransform: "none",
+											py: 1.4,
+											backdropFilter: "blur(6px)",
+											backgroundColor: theme.palette.mode === "dark" ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.02)",
+											borderColor: theme.palette.mode === "dark" ? "rgba(255,255,255,0.2)" : theme.palette.primary.main,
+											color: theme.palette.mode === "dark" ? "#fff" : theme.palette.primary.main,
+											"&:hover": {
+												transform: "scale(1.05)",
+												backgroundColor: theme.palette.mode === "dark" ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.04)",
+												boxShadow:
+													theme.palette.mode === "dark" ? "0 4px 14px rgba(0,0,0,0.4)" : "0 4px 12px rgba(0,0,0,0.1)",
+											},
+										})}
+									>
+										{card.buttonText}
+									</Button>
+								</Box>
 							</Box>
-						</Card>
+						</Box>
 					</Grid>
 				))}
 			</Grid>
@@ -200,11 +254,9 @@ function Home() {
 					Ready to collaborate or need an expert touch for your next project?
 				</Typography>
 				<Testimonials />
-				<Button variant="outlined" size="large" component={Link} to="/contact">
-					Contact Kris
-				</Button>
+				<SpecialButton link="/contact" text="Contact Me" />
 				<Box sx={{ mt: 8 }}>
-					<LatestPosts count={3} layout={"grid"}/>
+					<LatestPosts count={3} layout={"grid"} />
 				</Box>
 			</Box>
 		</Box>

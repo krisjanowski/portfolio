@@ -23,6 +23,7 @@ import { GlobalAudioManagerProvider } from "./contexts/GlobalAudioManagerContext
 import ScrollToTop from "./components/ScrollToTop";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import GetAQuote from "./pages/GetAQuote";
 
 function AppContent({ toggleMode, mode }) {
 	const theme = useTheme();
@@ -61,6 +62,7 @@ function AppContent({ toggleMode, mode }) {
 					<Route path="/projects/:slug" element={<ProjectPage />} />
 					<Route path="/blog" element={<Blog />} />
 					<Route path="/blog/:slug" element={<BlogPost />} />
+					<Route path="/get-a-quote" element={<GetAQuote />} />
 				</Routes>
 			</Container>
 			<Footer />
