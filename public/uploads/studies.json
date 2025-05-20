@@ -30,6 +30,18 @@
       "beforeUrl": "/audio/discovery.wav",
       "afterUrl": "/audio/discovery.wav",
       "conclusion": "Dynamic EQ side-chaining restored vocal intelligibility, improving PESQ objective quality by 0.42."
+    },
+    {
+      "urlLabel": "1 day",
+      "url": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1747736513/Limitless_MASTER_1.1_tbuaxd.wav",
+      "beforeUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1747736628/Logic_Experiment_2_10_min_ikj0e0.wav",
+      "afterUrl": "https://res.cloudinary.com/dwbtyb0ea/video/upload/v1747736630/Logic_Experiment_2_1_hr_qpshh2.wav",
+      "beforeLabel": "10 minutes",
+      "title": "Time Restricted Development, Mixing & Mastering Episode Two",
+      "afterLabel": "1 hour",
+      "type": "experiment",
+      "description": "A sequel to the previous time restricted experiment where I challenged myself to fully produce, mix and master a track in 10 minutes, 1 hour, and 1 day. ",
+      "conclusion": "Repeating this experiment highlighted some areas in which my time management could have been more efficient in order to maximise productivity across the project. Processes such as beat making and instrument selection/modification proved to demand a significant portion of the time in both experiments alike, as well as similar overall track lengths. Whilst working under a strict time constraint restricts the amount of music that's possible to create, ultimately it's about quality over quantity, even just two minutes of audio can still pack a punch!"
     }
   ]
 }
