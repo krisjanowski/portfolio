@@ -1,28 +1,10 @@
 {
   "testimonials": [
     {
-      "name": "Thomas Sean Fahey",
-      "role": "Software Engineer, Musician, & Writer",
-      "testimonial": "I’ve known Kris for over 14 years, since we were in a band together at school—he was the bassist, main songwriter, and wrote nearly every guitar riff we played. His musical instincts were always razor-sharp, and his ear for tone and dynamics set the foundation for everything we performed. Watching him evolve into a professional mixing and mastering engineer feels like a natural progression. His dedication to sound has only deepened over the years, and his ability to bring music to life in the studio is something I’ve always respected. You’re in safe hands with Kris.",
-      "avatar": "/uploads/profile.jpg"
-    },
-    {
-      "name": "Ashe O'Hara",
-      "role": "Vocalist, Ex.TesseracT",
-      "testimonial": "As a long time friend and collaborator of Kris’, I have always been amazed by his skill and talent. His work expresses deeply his passion and attention to detail, and he has only become more proficient with time. I’ve had the pleasure of collaborating on personal projects, alongside his own creative pursuits and I have always been extremely proud of the music we have made. I will always be a satisfied client of Kris’. ",
-      "avatar": "/uploads/whatsapp-image-2025-05-13-at-14.03.15.jpeg"
-    },
-    {
-      "name": "Ania Diamond",
-      "role": "Electronic Music Producer",
-      "testimonial": "Working with Kris elevated my entire production. He intuitively understands sonic texture and dynamics.",
-      "avatar": "/avatars/ania.jpg"
-    },
-    {
-      "name": "Daniel Regius",
-      "role": "Mayones Guitars Artist",
-      "testimonial": "Every time I collaborate with Kris, the end result exceeds my expectations. His ear is both technical and artistic.",
-      "avatar": "/avatars/daniel.jpg"
+      "name": "Aryaki Alomyan",
+      "role": "Singer-Songwriter",
+      "testimonial": "Working with Kris is always a refreshing experience. His production style is super creative — he’s not afraid to take risks and try unexpected ideas, and they somehow always work. We’ve collaborated on a bunch of songs, and every time he brings something unique to the table that pushes the track to a whole new level. Beyond the technical skills, he’s just a solid person to work with — chill, focused, and really tuned in to the vibe. Highly recommend him to anyone looking to make something that stands out.",
+      "avatar": "/uploads/screenshot-2025-05-26-at-09.20.06.png"
     }
   ]
 }
